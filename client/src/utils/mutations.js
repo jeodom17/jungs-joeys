@@ -1,30 +1,55 @@
 import { gql } from '@apollo/client';
 
-const LOGIN_USER = gql`
-    mutation login {
-        email
-        password
-    }
-`;
-
-const ADD_USER = gql`
-    mutation addUser {
-        email
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
         username
-        password
+      }
     }
+  }
 `;
 
-const ADD_COMMENT = gql`
-    mutation addComment {
-        commentData
+export const ADD_USER = gql`
+  mutation addUser($username: String!, $email: String!, $password: String!) {
+    addUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
     }
+  }
 `;
 
-const REMOVE_COMMENT = gql`
-    mutation removeBook {
-        commentId
+export const ADD_COMMENT = gql`
+  mutation addComment($commentData: CommentInput!) {
+    addComment(bookData: $commentData) {
+      topicId
+      question
+      comments {
+          commentId
+          commenter
+          content
+          upvotes
+      }
     }
+  }
 `;
 
-export default {LOGIN_USER, ADD_USER, ADD_COMMENT, REMOVE_COMMENT};
+export const REMOVE_COMMENT = gql`
+    mutation removeComment($commentId: ID!) {
+        removeComment(commentId: $commentId) {
+            topicId
+            question
+            comments {
+                commentId
+                commenter
+                content
+                upvotes
+            }
+        }
+    }
+`;

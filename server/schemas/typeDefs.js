@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    posts: Post
+    posts: [Comments]
   }
 
   type Topic {
