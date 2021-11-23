@@ -1,18 +1,15 @@
 const { Schema, model } = require('mongoose');
 const {User} = require('./User');
-const {Post} = require('./Post');
+const {Comment} = require('./Comment');
 
-const commentSchema = new Schema(
+const postSchema = new Schema(
   {
     content: {
         type: String,
         required: true
     },
-    commenter: User,
-    upvotes: {
-      type: Number,
-    },
-    post: Post
+    poster: User,
+    comments: [Comment],
   },
   // set this to use virtual below
   {
@@ -22,6 +19,6 @@ const commentSchema = new Schema(
   }
 );
 
-const Comment = model('Comment', commentSchema);
+const Post = model('Post', postSchema);
 
-module.exports = Comment;
+module.exports = Post;
