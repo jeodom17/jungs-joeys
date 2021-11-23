@@ -16,6 +16,8 @@
     "concurrently": "^6.4.0"
   },
   "dependencies": {
-    "graphql": "^16.0.1"
+    "graphql": "^16.0.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "react-materialize": "^3.10.0"
   }
 }
