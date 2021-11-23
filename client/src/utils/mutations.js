@@ -24,17 +24,38 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_COMMENT = gql`
-  mutation addComment($commentData: CommentInput!) {
-    addComment(bookData: $commentData) {
+export const ADD_POST = gql`
+  mutation addPost($postData: PostInput!) {
+    addPost(postData: $postData) {
       topicId
       question
-      comments {
-          commentId
-          commenter
+      posts {
+          postId
+          author
           content
-          upvotes
+          comments {
+              commentId
+              commenter
+              content
+              upvotes
+          }
       }
+    }
+  }
+`;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($commentData: CommentInput!) {
+    addComment(commentData: $commentData) {
+        postId
+        author
+        content
+        comments {
+            commentId
+            commenter
+            content
+            upvotes
+        }
     }
   }
 `;
@@ -42,8 +63,9 @@ export const ADD_COMMENT = gql`
 export const REMOVE_COMMENT = gql`
     mutation removeComment($commentId: ID!) {
         removeComment(commentId: $commentId) {
-            topicId
-            question
+            postId
+            author
+            content
             comments {
                 commentId
                 commenter

@@ -8,7 +8,11 @@ const GET_ME = gql`
             email
             posts {
                 content
-                upvotes
+                comments{
+                    commenter
+                    content
+                    upvotes
+                }
             }
         }
         
