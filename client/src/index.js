@@ -5,11 +5,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "materialize-css/dist/css/materialize.min.css";
+import { ApolloProvider } from '@apollo/client';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+<BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
