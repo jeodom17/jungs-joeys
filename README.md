@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# PROJECT 3
+
+<style>H1{color:yellow;}</style>
+<style>H2{color:Lime;}</style>
+<style>p{color:White;}</style>
+
+## See Demo Below
+
+![Project Demo Gif](/assets/project.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
