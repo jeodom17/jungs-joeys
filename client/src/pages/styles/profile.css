@@ -1,0 +1,42 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+
+
+
+.side {
+  /* flex-grow: 3; */
+  align-content:flex-start;
+  height: 100vh;
+  width:20vw;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.posts {
+    /* flex-grow: 7; */
+    justify-content: right;
+    width:80vw;
+    margin-right: 10px;
+    
+}
+
+.top {
+    /* flex-grow: 7; */
+    justify-content: right;
+    width:80vw;
+    margin-right: 10px;
+    
+}
+
+@media (max-width: 800px) {
+    .layout {
+      flex-direction: column;
+    }
+  }
+
+
+
