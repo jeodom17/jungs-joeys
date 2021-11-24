@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const {Comment} = require('./Comment');
+const {Post} = require('./Post');
 
 const topicSchema = new Schema(
   {
@@ -7,9 +7,8 @@ const topicSchema = new Schema(
         type: String,
         required: true
     },
-    comments: [Comment]
+    posts: [Post]
   },
-
 );
 
 const Topic = model('Topic', topicSchema);

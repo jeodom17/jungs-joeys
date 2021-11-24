@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import { Navbar } from "react-materialize";
+import Landing from "./pages/Landing";
+// import { ApolloClient } from '@apollo/client';
+import Profile from "./pages/Profile";
+import { Route, Routes } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Forum from "./pages/Forum";
+
 
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Navbar />
       </header>
+      <main>
+        <Routes>
+          <Route exact path="/" element={<Landing/>} />
+          <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/forum" element={<Forum/>} />
+        </Routes>
+      </main>
+        <Footer />
     </div>
+    </>
   );
 }
 
