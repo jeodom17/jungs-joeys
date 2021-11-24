@@ -21,7 +21,7 @@ db.once('open', async () => {
         for (newPost of posts) {
             //randomly assign each post to a user
             const tempUser = users[Math.floor(Math.random() * users.length)];
-            tempUser.posts.push(newPost._id);
+            tempUser.posts = newPost._id;
             await tempUser.save();
 
             //randomly assign a topic to each post
