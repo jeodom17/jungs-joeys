@@ -24,7 +24,7 @@ const typeDefs = gql`
 
   type Comment {
     commentId: ID!
-    commenter: User
+    author: User
     content: String
     upvotes: Int
   }
@@ -36,7 +36,7 @@ const typeDefs = gql`
 
   input CommentInput {
     commentId: ID!
-    commenter: String!
+    author: String!
     content: String!
     upvotes: Int
   }
