@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const { Post } = require('./Post');
 
 const topicSchema = new Schema(
   {
