@@ -1,434 +1,74 @@
 [
     {
-        "question": "Unit 1 - HTML, Git, CSS",
-        "posts": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 1 - HTML, Git, CSS"
     },
     {
-        "question": "Unit 2 - Advanced CSS",
-        "posts": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 2 - Advanced CSS"
     },
     {
-        "question": "unit 3 - JavaScript",
-        "posts": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "unit 3 - JavaScript"
     },
     {
-        "question": "Unit 4 - Web APIs",
-        "posts": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 4 - Web APIs"
     },
     {
-        "question": "Unit 5 - Third Party APIs",
-        "posts": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 5 - Third Party APIs"
     },
     {
-        "question": "Unit 6 - Server Side APIs",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 6 - Server Side APIs"
     },
     {
-        "question": "Unit 7 - Project 1",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 7 - Project 1"
     },
     {
-        "question": "Unit 8 - Project 1 Continued",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 8 - Project 1 Continued"
     },
     {
-        "question": "Unit 9 - NodeJS",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 9 - NodeJS"
     },
     {
-        "question": "Unit 10 - OOP",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 10 - OOP"
     },
     {
-        "question": "Unit 11 - Express",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 11 - Express"
     },
     {
-        "question": "Unit 12 - SQL",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 12 - SQL"
     },
     {
-        "question": "Unit 13 - ORM",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 13 - ORM"
     },
     {
-        "question": "Unit 14 - MVC",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 14 - MVC"
     },
     {
-        "question": "Unit 15 - Project 2",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 15 - Project 2"
     },
     {
-        "question": "Unit 16 - Project 2 Continued",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 16 - Project 2 Continued"
     },
     {
-        "question": "Unit 17 - CS",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 17 - CS"
     },
     {
-        "question": "Unit 18 - NoSQL",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 18 - NoSQL"
     },
     {
-        "question": "Unit 19 - PWA",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 19 - PWA"
     },
     {
-        "question": "Unit 20 - React",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 20 - React"
     },
     {
-        "question": "Unit 21 - MERN",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 21 - MERN"
     },
     {
-        "question": "Unit 22 - State",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 22 - State"
     },
     {
-        "question": "Unit 23 - Project 3",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 23 - Project 3"
     },
     {
-        "question": "Unit 24 - Project 3 Continued",
-        "comments": [
-            {
-                "content": "This unit is so good",
-                "poster": {
-                    "username": "Parker"
-                },
-                "comments": {
-                    "content": "Agreed!",
-                    "commenter": {
-                        "username": "Leci"
-                    },
-                    "upvotes": 5
-                }
-            }
-        ]
+        "question": "Unit 24 - Project 3 Continued"
     }
 ]

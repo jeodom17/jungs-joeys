@@ -1,51 +1,41 @@
 import React from "react";
+import github from "../../assets/github.png";
+
+var footer = {
+  display: "block",
+  padding: "20px",
+  height: "60px",
+  width: "100%",
+};
 
 var style = {
-  backgroundColor: "lime",
-  borderTop: "1px solid #E7E7E7",
   textAlign: "center",
   padding: "20px",
-  position: "fixed",
   left: "0",
   bottom: "0",
   height: "60px",
   width: "100%",
-}
+};
 
-var phantom = {
-display: 'block',
-padding: '20px',
-height: '60px',
-width: '100%',
-}
+var size = {
+  width: "42px",
+  height: "42px",
+};
 
-function Footer({ children }) {
+var children = "© 2014 Copyright Text";
+// <a class="white-text text-lighten-4 right" href="#!">More Links</a>
+function Footer() {
   return (
-      <div>
-          <div style={phantom} />
-          
-          <div style={style}>
-              { children }
-          </div>
-          
+    <div>
+      <div style={footer} />
+
+      <div style={style}>
+        <a href="https://github.com/jeodom17/project-3" target="_blank">
+          <img src={github} alt="github icon" style={size}></img>
+        </a>
       </div>
-  )
+    </div>
+  );
 }
 
 export default Footer;
-
-// export default function Nav() {
-//     return (
-//       <>
-//       <footer class="page-footer">
-//          <h2>Footer</h2>
-//             <div class="container">
-//             © 2014 Copyright Text
-//             <a class="white-text text-lighten-4 right" href="#!">More Links</a>
-//             </div>
-           
-          
-//         </footer>
-//       </>
-//     );
-//   }
