@@ -1,4 +1,16 @@
-
+.navbar-fixed,
 .bar {
-    padding: 10px;
+  background-color: #271c19;
+  height: 12vh;
+}
+
+#joeys {
+  font-size: 400%;
+  font-family: "Permanent Marker", cursive;
+  padding: 2vh 0vh;
+}
+
+.header-font {
+  font-size: 180%;
+  padding: 2vh 2vh;
 }
