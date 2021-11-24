@@ -7,17 +7,18 @@ import "./styles/profile.css"
 
 export default function Profile() {
     return (
-
-      <div className="layout">
+    <div className="wrapper">
+      <div className="side">
         <SideNav />
-        
+      </div>
       <div className="question">
         <Question />
       </div>
-      <div className="question">
+      <div className="top">
         <TopRated />
       </div>
-      </div>
+    </div>
+      
 
     );
  }
