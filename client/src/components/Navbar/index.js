@@ -5,18 +5,25 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li className="divider"></li>
+        <li><a href="#!">three</a></li>
+      </ul>
       <nav>
-        <div class="nav-wrapper  light-blue lighten-2">
+        <div className="nav-wrapper  light-blue lighten-2">
           <Link to="/" class="brand-logo left">
             Jung's Joey's
           </Link>
           <ul id="nav-mobile" class="right -on-med-and-down">
             <li>
               <Link
-                to="/forum"
-                class="header-font"
+                to=""
+                className="header-font dropdown-trigger" data-target="dropdown1"
               >
                 Study
+                <i class="material-icons right">arrow_drop_down</i>
               </Link>
             </li>
             <li class="active">
