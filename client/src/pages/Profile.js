@@ -7,14 +7,13 @@ import "./styles/profile.css"
 
 export default function Profile() {
     return (
-    <div className="wrapper">
+    <div className="layout">
       <div className="side">
         <SideNav />
       </div>
-      <div className="question">
+      <div className="posts">
         <Question />
-      </div>
-      <div className="top">
+     
         <TopRated />
       </div>
     </div>
