@@ -26,7 +26,7 @@ const typeDefs = gql`
     commentId: ID!
     commenter: User
     content: String
-    upvotes: Number
+    upvotes: Int
   }
 
   type Auth {
@@ -36,16 +36,16 @@ const typeDefs = gql`
 
   input CommentInput {
     commentId: ID!
-    commenter: User
-    content: String
-    upvotes: Number
+    commenter: String!
+    content: String!
+    upvotes: Int
   }
 
   input PostInput {
     postId: ID!
-    topic: Topic!
+    topic: String!
     content: String!
-    comments: [Comment]
+    comments: [String]
   }
 
 

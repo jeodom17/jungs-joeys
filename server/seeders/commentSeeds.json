@@ -1,0 +1,18 @@
+[
+    {
+        "content": "random post 1",
+        "upvotes": 2
+    },
+    {
+        "content": "random post 2",
+        "upvotes": 0
+    },
+    {
+        "content": "random post 3",
+        "upvotes": 1
+    },
+    {
+        "content": "random post 4",
+        "upvotes": 4
+    }
+]

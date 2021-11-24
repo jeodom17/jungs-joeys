@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const {Comment} = require('./Comment')
-
 const userSchema = new Schema(
   {
     username: {
@@ -21,11 +19,14 @@ const userSchema = new Schema(
       required: true,
     },
     profilePicture: {
-        type: String,
-        required: false
+      type: String,
+      required: false
     },
-    comments: [Comment]
-   
+    comments: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+    }]
+
   },
   // set this to use virtual below
   {
