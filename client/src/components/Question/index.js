@@ -4,27 +4,47 @@ import { Link } from "react-router-dom";
 
 export default function Question() {
     return (
-      <>
-    <div class="container">
-      <div class="row">
-       <div class="row">
-        <div class="col s12 m6 lg3">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Card Title</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively
-                    </p>
-                </div>
-            <div class="card-action">
-                <Link to="/profile">Profile on Card</Link>
-                <Link to="/">Home on card</Link>
-            </div>
-            </div>
-        </div>
-       </div>
+      
+      <div>
+        <ul className="collection">
+          <li className="collection-item avatar">
+               <p>
+                My Posts 
+              </p>
+              <Link to="#!" className="secondary-content">
+                <i className="material-icons"></i>
+              </Link>
+          </li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle">folder</i>
+            <span className="title">Username:</span>
+            <p>
+              Topic:
+            </p>
+            <p>
+              Question:
+            </p>
+            <p>
+              <Link>See Comments</Link>
+            </p>
+            <Link to="#!" className="secondary-content"><i className="material-icons">grade</i></Link>
+          </li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle">folder</i>
+            <span className="title">Username - 2:</span>
+            <p>
+              Topic -2 :
+            </p>
+            <p>
+              Question - 2 :
+            </p>
+            <p>
+              <Link>See Comments</Link>
+            </p>
+            <Link to="#!" className="secondary-content"><i className="material-icons">grade</i></Link>
+          </li>
+      </ul>
       </div>
-    </div>
-      </>
+    
     );
   }

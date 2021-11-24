@@ -15,7 +15,7 @@ export default function SideNav() {
   return (
     <>
     <div className="card">
-        <h1>John Doe</h1>
+        <h3>John Doe</h3>
         <img className="photo" src={profileImage} alt="John"></img>
         <p className="title">CEO & Founder, Example</p>
         <p>Harvard University</p>

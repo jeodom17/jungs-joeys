@@ -8,17 +8,24 @@
 
 
 .side {
-  flex-grow: 3;
+  /* flex-grow: 3; */
+  align-content:flex-start;
+  height: 100vh;
+  width:20vw;
 }
 
 .posts {
-    flex-grow: 7;
+    /* flex-grow: 7; */
     justify-content: right;
+    width:80vw;
     
 }
 
-.top {
-    background-color: rgb(255, 0, 191);
-}
+@media (max-width: 800px) {
+    .layout {
+      flex-direction: column;
+    }
+  }
+
 
 

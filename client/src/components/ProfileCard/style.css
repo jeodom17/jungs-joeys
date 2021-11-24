@@ -5,11 +5,17 @@
     max-width: 300px;
     margin: auto;
     text-align: center;
+    margin-top: 0%;
   }
   
   .title {
     color: grey;
     font-size: 18px;
+  }
+
+  .photo {
+    width:200px;
+    height:300px;
   }
   
   button {
