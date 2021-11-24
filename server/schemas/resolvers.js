@@ -13,6 +13,11 @@ const resolvers = {
 
             throw new AuthenticationError('Not logged in');
         },
+        getPosts: async (parent, args) => {
+            const postData = await Post.find({ _id: args._id });
+            return postData;
+        },
+        
     },
 
     Mutation: {
@@ -77,6 +82,7 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        
     },
 };
 
