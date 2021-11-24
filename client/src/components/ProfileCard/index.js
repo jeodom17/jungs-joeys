@@ -1,6 +1,8 @@
 
 import React from "react";
-import { Sidenav } from "materialize-css";
+// import { Sidenav } from "materialize-css";
+import profileImage from '../../assets/image.png';
+
 
 export default function SideNav() {
   return (
@@ -9,7 +11,7 @@ export default function SideNav() {
         <div class="col s3 body-font">
         <div>
             <div>
-            <img src="images/sample-1.jpg"></img>
+            <img src={profileImage}></img>
             <p>Username</p>
             </div>
             <div>
