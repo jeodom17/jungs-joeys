@@ -1,15 +1,16 @@
 const { Schema, model } = require('mongoose');
-const {Comment} = require('./Comment');
 
 const topicSchema = new Schema(
   {
     question: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
-    comments: [Comment]
+    posts: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Post'
+    }]
   },
-
 );
 
 const Topic = model('Topic', topicSchema);

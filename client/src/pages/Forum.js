@@ -1,12 +1,10 @@
 import React from "react";
-import Question from "../components/Question";
-import Topic from "../components/Topic";
-
+import Category from "../components/Category";
 
 export default function Forum() {
     return (
       <div>
-        <Topic />
+        <Category />
       </div>
     );
   }
