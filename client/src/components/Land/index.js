@@ -1,6 +1,6 @@
 import React,{ useRef, useEffect } from "react";
 // import M from "materialize-css";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import BgPhoto from '../../assets/bg.webp'
 // import "./style.css"
 
@@ -28,6 +28,8 @@ export default function Land() {
           color: "#f5f5f5"
         }}
       >
+        <Link to="/" className="center waves-effect waves-light btn-large">LOGIN / SIGNUP</Link>
+
       </div>
     );
   }

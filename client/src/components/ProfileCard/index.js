@@ -16,7 +16,7 @@ export default function SideNav() {
     <>
     <div className="card">
         <h3>John Doe</h3>
-        <img className="photo" src={profileImage} alt="John"></img>
+        <img className="photo circle" src={profileImage} alt="John"></img>
         <p className="title">CEO & Founder, Example</p>
         <p>Harvard University</p>
         <p>Harvard University</p>

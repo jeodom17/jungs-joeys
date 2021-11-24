@@ -13,7 +13,8 @@ export default function Profile() {
       </div>
       <div className="posts">
         <Question />
-     
+      </div>
+      <div className='top'>
         <TopRated />
       </div>
     </div>

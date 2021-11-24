@@ -1,19 +1,20 @@
 import React from "react";
 import { NavItem, Icon } from "materialize-css";
 import { Link } from "react-router-dom";
+import "./style.css"
 
 export default function Navbar() {
   return (
     <>
-      <div class="navbar-fixed">
-      <ul id="dropdown1" class="dropdown-content">
+      <div className="navbar-fixed">
+      <ul id="dropdown1" className="dropdown-content">
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
         <li className="divider"></li>
         <li><a href="#!">three</a></li>
       </ul>
-      <nav>
-        <div className="nav-wrapper  light-blue lighten-2">
+      <nav className="bar">
+        <div className="nav-wrapper lighten-2">
           <Link to="/" class="brand-logo left">
             Jung's Joey's
           </Link>

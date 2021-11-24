@@ -6,6 +6,7 @@
     margin: auto;
     text-align: center;
     margin-top: 0%;
+    margin-right: 5px;
   }
   
   .title {
@@ -14,8 +15,8 @@
   }
 
   .photo {
-    width:200px;
-    height:300px;
+    width:250px;
+    height:350px;
   }
   
   button {
