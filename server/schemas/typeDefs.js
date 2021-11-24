@@ -36,16 +36,16 @@ const typeDefs = gql`
 
   input CommentInput {
     commentId: ID!
-    commenter: User
-    content: String
+    commenter: String!
+    content: String!
     upvotes: Int
   }
 
   input PostInput {
     postId: ID!
-    topic: Topic!
+    topic: String!
     content: String!
-    comments: [Comment]
+    comments: [String]
   }
 
 
