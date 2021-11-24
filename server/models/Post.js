@@ -1,22 +1,23 @@
 const { Schema, model } = require('mongoose');
-const {User} = require('./User');
-const {Comment} = require('./Comment');
+const { userSchema } = require('./User');
+const { commentSchema } = require('./Comment');
 
 const postSchema = new Schema(
   {
     content: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
-    poster: User,
-    comments: [Comment],
+    poster: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    comments: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+    }
+    ],
   },
-  // set this to use virtual below
-  {
-    toJSON: {
-      virtuals: true,
-    },
-  }
 );
 
 const Post = model('Post', postSchema);

@@ -1,13 +1,16 @@
 const { Schema, model } = require('mongoose');
-const {Post} = require('./Post');
+const { Post } = require('./Post');
 
 const topicSchema = new Schema(
   {
     question: {
-        type: String,
-        required: true
+      type: String,
+      required: true
     },
-    posts: [Post]
+    posts: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Post'
+    }]
   },
 );
 
