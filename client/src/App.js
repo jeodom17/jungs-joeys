@@ -4,18 +4,18 @@ import Landing from "./pages/Landing";
 import { ApolloClient } from '@apollo/client';
 import Profile from "./pages/Profile";
 import { Route, Routes } from 'react-router-dom';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
 
 
 function App() {
   return (
     <>
     <div className="App">
-      <Landing />
+      <Navbar />
       <Routes>
           <Route exact path="/" element={<Landing/>} />
-          <Route
-            exact
-            path="/profile"
+          <Route exact path="/profile"
             element={<Profile />}
           />
         </Routes>
