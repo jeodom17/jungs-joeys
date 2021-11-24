@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
+      <div class="navbar-fixed">
       <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
@@ -54,6 +55,7 @@ export default function Navbar() {
           </ul>
         </div>
       </nav>
+      </div>
     </>
   );
 }
