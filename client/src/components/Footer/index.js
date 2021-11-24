@@ -10,6 +10,7 @@ export default function Nav() {
             © 2014 Copyright Text
             <a class="white-text text-lighten-4 right" href="#!">More Links</a>
             </div>
+           
           
         </footer>
       </>

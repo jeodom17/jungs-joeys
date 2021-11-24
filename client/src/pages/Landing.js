@@ -7,11 +7,11 @@ import SideNav from "../components/ProfileCard";
 export default function Landing() {
     return (
       <div>
-        <Navbar />
+        
         
         <Land/>
 
-        <Footer />
+      
       </div>
     );
   }
