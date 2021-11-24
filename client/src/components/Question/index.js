@@ -8,7 +8,7 @@ export default function Question() {
     <div class="container">
       <div class="row">
        <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m6 lg3">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
                     <span class="card-title">Card Title</span>
@@ -17,7 +17,7 @@ export default function Question() {
                     </p>
                 </div>
             <div class="card-action">
-                <Link href="#">This is a link</Link>
+                <Link to="/profile">Profile on Card</Link>
                 <Link to="/">Home on card</Link>
             </div>
             </div>

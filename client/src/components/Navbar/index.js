@@ -13,7 +13,7 @@ export default function Navbar() {
           <ul id="nav-mobile" class="right -on-med-and-down">
             <li>
               <Link
-                to="https://github.com/jeodom17/project-3"
+                to="/forum"
                 class="header-font"
               >
                 Study
@@ -21,7 +21,7 @@ export default function Navbar() {
             </li>
             <li class="active">
               <Link
-                to="https://github.com/jeodom17/project-3"
+                to="/forum"
                 class="header-font"
               >
                 Interview
@@ -29,7 +29,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="https://github.com/jeodom17/project-3"
+                to="/forum"
                 class="header-font"
               >
                 Career
@@ -39,7 +39,7 @@ export default function Navbar() {
               <Link to="/profile">MY PROFILE</Link>
             </li>
             <li>
-              <Link to="https://github.com/jeodom17/project-3">
+              <Link to="/">
                 Login / Signup
               </Link>
             </li>

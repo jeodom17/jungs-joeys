@@ -8,8 +8,6 @@ export default function Landing() {
     return (
       <div>
         <Navbar />
-
-        <SideNav />
         
         <Land/>
 
