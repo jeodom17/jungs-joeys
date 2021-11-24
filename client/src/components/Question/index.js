@@ -8,13 +8,15 @@ export default function Question() {
       <div>
         <ul className="collection">
           <li className="collection-item avatar">
-               <p>
+               <h3>
                 My Posts 
-              </p>
-              <Link to="#!" className="secondary-content">
+              </h3>
+              <Link to="/" className="secondary-content">
                 <i className="material-icons"></i>
               </Link>
           </li>
+          </ul>
+        <ul className="collection">
           <li className="collection-item avatar">
             <i className="material-icons circle">folder</i>
             <span className="title">Username:</span>
@@ -25,9 +27,9 @@ export default function Question() {
               Question:
             </p>
             <p>
-              <Link>See Comments</Link>
+              <Link to="/">See Comments</Link>
             </p>
-            <Link to="#!" className="secondary-content"><i className="material-icons">grade</i></Link>
+            <Link to="/" className="secondary-content"><i className="material-icons">grade</i></Link>
           </li>
           <li className="collection-item avatar">
             <i className="material-icons circle">folder</i>
@@ -39,9 +41,23 @@ export default function Question() {
               Question - 2 :
             </p>
             <p>
-              <Link>See Comments</Link>
+              <Link to="/">See Comments</Link>
             </p>
-            <Link to="#!" className="secondary-content"><i className="material-icons">grade</i></Link>
+            <Link to="/" className="secondary-content"><i className="material-icons">grade</i></Link>
+          </li>
+          <li className="collection-item avatar">
+            <i className="material-icons circle">folder</i>
+            <span className="title">Username - 3:</span>
+            <p>
+              Topic - 3 :
+            </p>
+            <p>
+              Question - 3 :
+            </p>
+            <p>
+              <Link to="/">See Comments</Link>
+            </p>
+            <Link to="/" className="secondary-content"><i className="material-icons">grade</i></Link>
           </li>
       </ul>
       </div>
