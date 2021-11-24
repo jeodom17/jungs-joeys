@@ -1,0 +1,15 @@
+
+.codetopic {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+
+  .topic1 {
+    width: 50vw; 
+  }
+
+  .topic2 {
+    width: 50vw; 
+  }

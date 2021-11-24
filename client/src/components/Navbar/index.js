@@ -15,36 +15,14 @@ export default function Navbar() {
             <ul id="nav-mobile" className="left">
               <li>
                 <Link
-                  to=""
+                  to="/forum"
                   className="header-font dropdown-trigger"
                   data-target="dropdown1"
                 >
-                  Study
-                  <i class="material-icons right">arrow_drop_down</i>
-                  <ul id="dropdown1" className="dropdown-content">
-                    <li>
-                      <a href="#!">one</a>
-                    </li>
-                    <li>
-                      <a href="#!">two</a>
-                    </li>
-                    <li className="divider"></li>
-                    <li>
-                      <a href="#!">three</a>
-                    </li>
-                  </ul>
+                  Study Forum 
                 </Link>
               </li>
-              <li>
-                <Link to="/forum" class="header-font">
-                  Interview
-                </Link>
-              </li>
-              <li>
-                <Link to="/forum" class="header-font">
-                  Career
-                </Link>
-              </li>
+              
             </ul>
             <ul id="nav-mobile" className="right">
               <li>
