@@ -36,7 +36,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/" class="header-font">
+                <Link to="/account" class="header-font">
                   Login / Signup
                 </Link>
               </li>
