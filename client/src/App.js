@@ -8,6 +8,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Forum from "./pages/Forum";
 import Topic from "./pages/Topic";
+import Signup from "./pages/Signup";
+import SignUpForm from "./components/Signup";
+import SignInForm from "./components/Login";
+
+import "./App.css";
+
 
 function App() {
   return (
@@ -22,6 +28,9 @@ function App() {
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/forum" element={<Forum />} />
             <Route exact path="/topic" element={<Topic />} />
+            <Route exact path="/account" element={<Signup />} />
+            <Route exact path="/signup" element={<SignUpForm/>} />
+            <Route path="/login" element={<SignInForm/>} />
           </Routes>
         </main>
         <Footer />

@@ -18,3 +18,21 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const GET_POSTS = gql`
+query getPosts($topic: ID!) {
+    getPosts(topic: $topic) {
+        author {
+          username
+        }
+        content
+        comments {
+            content
+            author {
+                username
+            }
+            upvotes
+        }
+    }
+}
+`

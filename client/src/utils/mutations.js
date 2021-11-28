@@ -31,11 +31,15 @@ export const ADD_POST = gql`
       question
       posts {
           postId
-          author
+          author {
+            username
+          }
           content
           comments {
               commentId
-              commenter
+              author {
+                username
+              }
               content
               upvotes
           }
@@ -48,11 +52,15 @@ export const ADD_COMMENT = gql`
   mutation addComment($commentData: CommentInput!) {
     addComment(commentData: $commentData) {
         postId
-        author
+        author {
+          username
+        }
         content
         comments {
             commentId
-            commenter
+            author {
+              username
+            }
             content
             upvotes
         }
@@ -64,11 +72,15 @@ export const REMOVE_COMMENT = gql`
     mutation removeComment($commentId: ID!) {
         removeComment(commentId: $commentId) {
             postId
-            author
+            author {
+              username
+            }
             content
             comments {
                 commentId
-                commenter
+                author {
+                  username
+                }
                 content
                 upvotes
             }
