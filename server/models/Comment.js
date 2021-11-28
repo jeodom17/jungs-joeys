@@ -1,5 +1,10 @@
 const { Schema, model } = require('mongoose');
 
+
+// ***********
+// * MIGHT WANT TO INCLUDE postID to link comment to its post
+// ***********
+
 const commentSchema = new Schema(
   {
     content: {

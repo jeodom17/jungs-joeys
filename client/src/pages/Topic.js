@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSearchParams } from 'react-router-dom';
+
+
 
 export default function Topic() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  
+  
+  useEffect(() => {
+    console.log("HERE");
+    console.log(searchParams)
+    console.log(searchParams.getAll("name"))
+  })
     return (
       <div>
         

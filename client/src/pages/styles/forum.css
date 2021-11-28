@@ -1,0 +1,10 @@
+
+.codetopic {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: #f1f1f1;
+  }
+

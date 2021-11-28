@@ -10,7 +10,7 @@ export default function Land() {
         <img src={jungaroo} className="landing-logo" alt="logo" />
       </div>
       <Link
-        to="/"
+        to="/account"
         className="center waves-effect waves-light btn-large findbtn"
       >
         LOGIN / SIGNUP
