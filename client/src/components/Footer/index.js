@@ -22,7 +22,6 @@ var size = {
   height: "42px",
 };
 
-var children = "© 2014 Copyright Text";
 // <a class="white-text text-lighten-4 right" href="#!">More Links</a>
 function Footer() {
   return (
