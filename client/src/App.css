@@ -45,8 +45,8 @@
 
 .appAside {
   width: 50%;
-  background-image: url("./assets/bg.webp");
-
+  background-image: url("./assets/code-bg.gif");
+  background-size: cover;
 }
 
 .bgImg {
