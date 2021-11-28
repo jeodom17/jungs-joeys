@@ -1,8 +1,10 @@
+
+//^ Imports below
+
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./style.css"
 
-
+//* Sign up Form
 class SignUpForm extends Component {
   constructor() {
     super();
@@ -42,38 +44,25 @@ class SignUpForm extends Component {
         <form onSubmit={this.handleSubmit} className="formFields">
           <div className="formField">
             <label className="formFieldLabel" htmlFor="name">
-              Full Name
+              User_Name 
             </label>
             <input
-              type="text"
+              type="name"
               id="name"
               className="formFieldInput"
-              placeholder="Enter your full name"
+              placeholder="Enter your USER_NAME"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
             />
           </div>
-          <div className="formField">
-            <label className="formFieldLabel" htmlFor="password">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="formFieldInput"
-              placeholder="Enter your password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </div>
+
           <div className="formField">
             <label className="formFieldLabel" htmlFor="email">
               E-Mail Address
             </label>
             <input
-              type="email"
+              type="name"
               id="email"
               className="formFieldInput"
               placeholder="Enter your email"
@@ -84,26 +73,24 @@ class SignUpForm extends Component {
           </div>
 
           <div className="formField">
-            <label className="formFieldCheckboxLabel">
-              <input
-                className="formFieldCheckbox"
-                type="checkbox"
-                name="hasAgreed"
-                value={this.state.hasAgreed}
-                onChange={this.handleChange}
-              />{" "}
-              I agree all statements in{" "}
-              <a href="null" className="formFieldTermsLink">
-                terms of service
-              </a>
+            <label className="formFieldLabel" htmlFor="password">
+              Password
             </label>
+            <input
+              type="name"
+              id="password"
+              className="formFieldInput"
+              placeholder="Enter your password"
+              name="password"
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
           </div>
+          
 
           <div className="formField">
             <button className="formFieldButton">Sign Up</button>{" "}
-            <Link to="/sign-in" className="formFieldLink">
-              I'm already member
-            </Link>
+            
           </div>
         </form>
       </div>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
-class SignInForm extends Component {
+class Login extends Component {
   constructor() {
     super();
 
@@ -37,14 +36,14 @@ class SignInForm extends Component {
         <form className="formFields" onSubmit={this.handleSubmit}>
           <div className="formField">
             <label className="formFieldLabel" htmlFor="email">
-              E-Mail Address
+              USER_NAME
             </label>
             <input
-              type="email"
-              id="email"
+              type="name"
+              id="name"
               className="formFieldInput"
-              placeholder="Enter your email"
-              name="email"
+              placeholder="Enter your USER_NAME"
+              name="name"
               value={this.state.email}
               onChange={this.handleChange}
             />
@@ -55,7 +54,7 @@ class SignInForm extends Component {
               Password
             </label>
             <input
-              type="password"
+              type="name"
               id="password"
               className="formFieldInput"
               placeholder="Enter your password"
@@ -66,17 +65,13 @@ class SignInForm extends Component {
           </div>
 
           <div className="formField">
-            <button className="formFieldButton">Sign In</button>{" "}
-            <Link to="/" className="formFieldLink">
-              Create an account
-            </Link>
+            <button className="formFieldButton">Log In</button>{" "}
           </div>
 
-          
         </form>
       </div>
     );
   }
 }
 
-export default SignInForm;
+export default Login;
