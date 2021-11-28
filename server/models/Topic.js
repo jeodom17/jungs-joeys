@@ -8,7 +8,8 @@ const { Schema, model } = require('mongoose');
 const topicSchema = new Schema(
   {
     name: {
-      type: String
+      type: String,
+      required: true
     },
     question: {
       type: String,
