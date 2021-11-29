@@ -11,7 +11,7 @@ const typeDefs = gql`
   
   type Topic {
     topicId: ID!
-    question: String!
+    name: String!
     posts: [Post]
   }
 
@@ -20,6 +20,7 @@ const typeDefs = gql`
     postId: ID!
     author: User
     topic: Topic!
+    question: String!
     content: String!
     comments: [Comment]
   }
@@ -46,6 +47,7 @@ const typeDefs = gql`
   input PostInput {
     postId: ID!
     topic: String!
+    question: String!
     content: String!
     comments: [String]
   }
