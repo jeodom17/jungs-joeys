@@ -10,7 +10,6 @@ import Account from "./pages/Account";
 
 import "./App.css";
 
-
 function App() {
   return (
     <>
