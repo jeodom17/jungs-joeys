@@ -19,10 +19,9 @@ export default function Navbar() {
                   className="header-font dropdown-trigger"
                   data-target="dropdown1"
                 >
-                  Study Forum 
+                  Study Forum
                 </Link>
               </li>
-              
             </ul>
             <ul id="nav-mobile" className="right">
               <li>
@@ -37,7 +36,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link to="/account" class="header-font">
-                  Login / Signup
+                  Account
                 </Link>
               </li>
             </ul>
