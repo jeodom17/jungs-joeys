@@ -13,7 +13,7 @@ export default function Chatbox() {
             apiKey: apiKey,
 
             containerId: null,
-            redirectOnLeave: "http://localhost:3000/",
+            redirectOnLeave: "http://localhost:3000/chat",
 
             micEnabled: true,
             webcamEnabled: true,
