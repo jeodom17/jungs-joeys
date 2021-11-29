@@ -39,7 +39,7 @@ class CommModal extends Component {
           className="qModBtn waves-effect waves-light btn modal-trigger"
           data-target="modal3"
         >
-          Ask a Question
+          Add a Comment
           &nbsp;&nbsp;&nbsp;
           <i class="add-comment material-icons">insert_comment</i>
         </a>
@@ -56,15 +56,15 @@ class CommModal extends Component {
                         If you want Fixed Footer Modal then add
                         modal-fixed-footer to the "modal" div*/}
           <div className="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+            <h4>Add Your Comment Below</h4>
+            <p>Add Comment Form Goes Here</p>
           </div>
           <div className="modal-footer">
             <a className="modal-close waves-effect waves-red btn-flat">
               Disagree
             </a>
-            <a className="modal-close waves-effect waves-green btn-flat">
-              Agree
+            <a className="modal-close waves-effect waves-green btn">
+              Close
             </a>
           </div>
         </div>
