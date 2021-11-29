@@ -50,15 +50,11 @@ const typeDefs = gql`
     comments: [String]
   }
 
-
   type Query {
     me: User
-    getPosts(topicId: ID!): [Post]
-
+    getTopicByName(name: String!): Topic
+    getTopics: [Topic]
   }
-
-  
-  
 
   type Mutation {
     login(email: String!, password: String!): Auth
@@ -66,7 +62,6 @@ const typeDefs = gql`
     addPost(postData: PostInput!): Topic
     addComment(commentData: CommentInput!): Post
     removeComment(commentId: ID!): Post
-  
   }
 `;
 
