@@ -9,22 +9,22 @@ import { GET_ME, GET_TOPIC_BY_NAME } from "../utils/queries";
 
 export default function Topic() {
   // const [searchParams, setSearchParams] = useSearchParams();
-  
+
   const { loading, data } = useQuery(GET_TOPIC_BY_NAME, {
-  //   variables: { name: searchParams.get("name")}
+    //   variables: { name: searchParams.get("name")}
   });
 
   // // if data isn't here yet, say so
   // if (loading) {
   //   return <h2>LOADING.......</h2>;
   // }
-  
+
   // console.log(data)
-   const postData = data?.getTopicByName || [];
+  const postData = data?.getTopicByName || [];
   // console.log(postData)
 
   // // console.log(postData)
-  
+
   // //! useEffect(() => {
   //   //! console.log("HERE");
 
@@ -32,12 +32,19 @@ export default function Topic() {
   //   //* need to use useQuery with the correct queries and typedefs to get the topics to populate here
   //   // console.log(searchParams.get("name"))
   // //! })
-    return (
-      <>
-      <div>  
-        <h1>{postData}</h1>
-      </div> 
-     
+  return (
+    <>
+      <div className="container">
+        <div className="row">
+          <div className="col s6">
+            <h3>Let's Learn{postData}</h3>
+          </div>
+          <div className="col s6">
+          <QuesModal />
+        </div>
+        </div>
+      </div>
+
       <div className="container">
         <div class="row">
           <div class="col s12 m12">
