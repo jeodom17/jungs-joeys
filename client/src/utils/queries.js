@@ -16,8 +16,10 @@ export const GET_ME = gql`
             }
         }
     }
-  }
+  
 `;
+
+//******* add topic below  ******************
 
 export const GET_POSTS = gql`
 query getPosts($topic: ID!) {

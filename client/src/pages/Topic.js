@@ -18,12 +18,13 @@ export default function Topic() {
   }
 
   
-  useEffect(() => {
-    console.log("HERE");
+  //! useEffect(() => {
+    //! console.log("HERE");
+
     //* use searchParams.get("name") in a graphQL call to the Topic db to populate page with the correct questions
     //* need to use useQuery with the correct queries and typedefs to get the topics to populate here
     console.log(searchParams.get("name"))
-  })
+  //! })
     return (
       <div>
         

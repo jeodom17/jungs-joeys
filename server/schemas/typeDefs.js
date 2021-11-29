@@ -8,12 +8,15 @@ const typeDefs = gql`
     posts: [Post]
   }
 
+  //**** add name **********
   type Topic {
+    name: String
     topicId: ID!
     question: String!
     posts: [Post]
   }
 
+ 
   type Post {
     postId: ID!
     author: User
@@ -48,11 +51,15 @@ const typeDefs = gql`
     comments: [String]
   }
 
-
+//********* ???? ********************
   type Query {
     me: User
     getPosts(topicId: ID!): [Post]
+    getPosts(name: String): [Topic]
   }
+
+  
+  
 
   type Mutation {
     login(email: String!, password: String!): Auth
@@ -60,6 +67,7 @@ const typeDefs = gql`
     addPost(postData: PostInput!): Topic
     addComment(commentData: CommentInput!): Post
     removeComment(commentId: ID!): Post
+  
   }
 `;
 
