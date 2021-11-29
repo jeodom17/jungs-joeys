@@ -14,9 +14,8 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
 
-        //* added name to Post.find  change to getTopic
-        getPosts: async (parent, args) => {
-            const postData = await Post.find({ _id: args._id, name: args.name });
+        getTopicByName: async (parent, args) => {
+            const postData = await Topic.find({ name: args.name});
             return postData;
         },
         getTopics: async (parent, args) => {

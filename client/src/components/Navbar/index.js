@@ -19,14 +19,13 @@ export default function Navbar() {
                   className="header-font dropdown-trigger"
                   data-target="dropdown1"
                 >
-                  Study Forum 
+                  Study Forum
                 </Link>
               </li>
-              
             </ul>
             <ul id="nav-mobile" className="right">
               <li>
-                <Link to="/profile" class="header-font">
+                <Link to="/chat" class="header-font">
                   Chat
                 </Link>
               </li>
@@ -37,7 +36,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link to="/account" class="header-font">
-                  Login / Signup
+                  Account
                 </Link>
               </li>
             </ul>

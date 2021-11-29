@@ -21,6 +21,7 @@ export const GET_ME = gql`
 export const GET_TOPICS = gql`
     {
         getTopics {
+            name
             question
             posts {
                 content
@@ -32,22 +33,24 @@ export const GET_TOPICS = gql`
     }
 `;
 
-//******* add topic below  ******************
-
-export const GET_POSTS = gql`
-query getPosts($topic: ID!) {
-    getPosts(topic: $topic) {
-        author {
-          username
-        }
-        content
-        comments {
+export const GET_TOPIC_BY_NAME = gql`
+query getTopicByName($name: String) {
+    getTopicByName(name: $name) {
+        name
+        question
+        posts {
             content
             author {
                 username
             }
-            upvotes
+            comments {
+                content
+                author {
+                    username
+                }
+                upvotes
+            }
         }
     }
 }
-`
+`;

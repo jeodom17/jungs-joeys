@@ -35,6 +35,13 @@ db.once('open', async () => {
             await newPost.save();
         }
 
+        for (topic of topics) {
+            // assign an array of posts to each topic
+            const tempPost = posts[Math.floor(Math.random() * posts.length)];
+            topic.posts.push(tempPost._id);
+            await topic.save();
+        }
+
         console.log('all done!');
         process.exit(0);
     } catch (err) {

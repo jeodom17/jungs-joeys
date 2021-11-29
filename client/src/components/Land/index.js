@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import jungaroo from "../../assets/jungaroo.png";
+import circletext from "../../assets/circletext.png";
 import "./style.css";
 
 export default function Land() {
   return (
     <div className="landing">
       <div className="landing-header">
-        <img src={jungaroo} className="landing-logo" alt="logo" />
+        <img src={circletext} className="landing-logo" alt="logo" />
       </div>
       <Link
         to="/account"

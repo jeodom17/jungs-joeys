@@ -7,9 +7,9 @@ import Footer from "./components/Footer";
 import Forum from "./pages/Forum";
 import Topic from "./pages/Topic";
 import Account from "./pages/Account";
+import Chat from './pages/Chat';
 
 import "./App.css";
-
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
             <Route exact path="/forum" element={<Forum />} />
             <Route exact path="/topic" element={<Topic />} />
             <Route exact path="/account" element={<Account />} />
+            <Route exact path="/chat" element={<Chat />} />
           </Routes>
         </main>
         <Footer />
