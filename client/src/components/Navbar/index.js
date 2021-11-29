@@ -25,7 +25,7 @@ export default function Navbar() {
             </ul>
             <ul id="nav-mobile" className="right">
               <li>
-                <Link to="/profile" class="header-font">
+                <Link to="/chat" class="header-font">
                   Chat
                 </Link>
               </li>
