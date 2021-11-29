@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 
-class QuesModal extends Component {
+class SeeCommModal extends Component {
   componentDidMount() {
     const options = {
       onOpenStart: () => {
@@ -37,16 +37,16 @@ class QuesModal extends Component {
       <div>
         <a
           className="qModBtn waves-effect waves-light btn modal-trigger"
-          data-target="modal1"
+          data-target="modal2"
         >
-          Ask a Question
+          See Comments 
         </a>
 
         <div
           ref={Modal => {
             this.Modal = Modal;
           }}
-          id="modal1"
+          id="modal2"
           className="modal"
         >
           {/* If you want Bottom Sheet Modal then add 
@@ -54,14 +54,14 @@ class QuesModal extends Component {
                         If you want Fixed Footer Modal then add
                         modal-fixed-footer to the "modal" div*/}
           <div className="modal-content">
-            <h4>Post a Question</h4>
-            <p>FORM GOES HERE</p>
+            <h4>Comments for:</h4>
+            <p>COMMENTS ON POST POPULATED HERE</p>
           </div>
           <div className="modal-footer">
-            <a className="modal-close waves-effect waves-red btn-flat">
+            <a className="modal-close waves-effect waves-red btn">
               Disagree
             </a>
-            <a className="modal-close waves-effect waves-light btn">
+            <a className="modal-close waves-effect waves-red btn">
               Close
             </a>
           </div>
@@ -71,4 +71,4 @@ class QuesModal extends Component {
   }
 }
 
-export default QuesModal;
+export default SeeCommModal;

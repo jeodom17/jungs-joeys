@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import SeeCommModal from "../components/SeeCommModal";
+import CommModal from "../components/CommModal";
+import QuesModal from "../components/QuesModal";
 import { useSearchParams } from "react-router-dom";
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_ME, GET_POSTS } from "../utils/queries";
@@ -28,9 +30,7 @@ export default function Topic() {
     <>
       <div>
         <h3>Welcome to the HTML study forum!</h3>
-        <button class="waves-effect waves-light btn-large">
-          Ask a Question
-        </button>
+        <QuesModal />
       </div>
 
       <div className="container">
@@ -49,11 +49,10 @@ export default function Topic() {
               </div>
               <div class="card-action">
                 <span class="comments material-icons">forum</span>
-                <Link to="#">See Comments</Link>
-                <a class="waves-effect waves-light btn">
-                  Add Comment
-                  <i class="add-comment material-icons">insert_comment</i>
-                </a>
+                <SeeCommModal />
+                <CommModal />
+                  
+               
               </div>
             </div>
           </div>
