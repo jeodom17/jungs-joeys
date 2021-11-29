@@ -7,7 +7,6 @@ const typeDefs = gql`
     email: String!
     posts: [Post]
   }
-
   
   type Topic {
     topicId: ID!
@@ -15,7 +14,6 @@ const typeDefs = gql`
     posts: [Post]
   }
 
- 
   type Post {
     postId: ID!
     author: User

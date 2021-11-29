@@ -14,7 +14,7 @@ const topicSchema = new Schema(
     posts: [{
       type: Schema.Types.ObjectId,
       ref: 'Post'
-    }]
+    }],
   },
 );
 
