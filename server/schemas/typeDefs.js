@@ -8,9 +8,8 @@ const typeDefs = gql`
     posts: [Post]
   }
 
-  //**** add name **********
+  
   type Topic {
-    name: String
     topicId: ID!
     question: String!
     posts: [Post]
@@ -51,7 +50,7 @@ const typeDefs = gql`
     comments: [String]
   }
 
-//********* ???? ********************
+
   type Query {
     me: User
     getPosts(topicId: ID!): [Post]
