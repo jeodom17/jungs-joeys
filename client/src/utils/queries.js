@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const GET_ME = gql`
     {
-        me{
+        me {
             _id
             username
             email
@@ -16,7 +16,20 @@ export const GET_ME = gql`
             }
         }
     }
-  
+`;
+
+export const GET_TOPICS = gql`
+    {
+        getTopics {
+            question
+            posts {
+                content
+                author {
+                    username
+                }
+            }
+        }
+    }
 `;
 
 //******* add topic below  ******************
