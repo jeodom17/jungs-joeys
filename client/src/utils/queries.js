@@ -32,6 +32,8 @@ export const GET_TOPICS = gql`
     }
 `;
 
+//******* add topic below  ******************
+
 export const GET_POSTS = gql`
 query getPosts($topic: ID!) {
     getPosts(topic: $topic) {
