@@ -7,20 +7,17 @@ const typeDefs = gql`
     email: String!
     posts: [Post]
   }
-
   
   type Topic {
-    topicId: ID!
-    question: String!
+    name: String!
     posts: [Post]
   }
 
- 
   type Post {
     postId: ID!
     author: User
     topic: Topic!
-    content: String!
+    content: String
     comments: [Comment]
   }
 

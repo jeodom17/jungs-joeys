@@ -1,22 +1,74 @@
 [
     {
-        "name": "HTML",
-        "question": "How do i do Html?"
+        "name": "Unit 1 - HTML, Git, CSS"
     },
     {
-        "name": "HTML",
-        "question": "HELPPPw do i do Html?"
+        "name": "Unit 2 - Advanced CSS"
     },
     {
-        "name": "CSS",
-        "question": "How do i do flexbox?"
+        "name": "unit 3 - JavaScript"
     },
     {
-        "name": "CSS",
-        "question": "How do i do css?"
+        "name": "Unit 4 - Web APIs"
     },
     {
-        "name": "Javascript",
-        "question": "How do i do js?"
+        "name": "Unit 5 - Third Party APIs"
+    },
+    {
+        "name": "Unit 6 - Server Side APIs"
+    },
+    {
+        "name": "Unit 7 - Project 1"
+    },
+    {
+        "name": "Unit 8 - Project 1 Continued"
+    },
+    {
+        "name": "Unit 9 - NodeJS"
+    },
+    {
+        "name": "Unit 10 - OOP"
+    },
+    {
+        "name": "Unit 11 - Express"
+    },
+    {
+        "name": "Unit 12 - SQL"
+    },
+    {
+        "name": "Unit 13 - ORM"
+    },
+    {
+        "name": "Unit 14 - MVC"
+    },
+    {
+        "name": "Unit 15 - Project 2"
+    },
+    {
+        "name": "Unit 16 - Project 2 Continued"
+    },
+    {
+        "name": "Unit 17 - CS"
+    },
+    {
+        "name": "Unit 18 - NoSQL"
+    },
+    {
+        "name": "Unit 19 - PWA"
+    },
+    {
+        "name": "Unit 20 - React"
+    },
+    {
+        "name": "Unit 21 - MERN"
+    },
+    {
+        "name": "Unit 22 - State"
+    },
+    {
+        "name": "Unit 23 - Project 3"
+    },
+    {
+        "name": "Unit 24 - Project 3 Continued"
     }
 ]
