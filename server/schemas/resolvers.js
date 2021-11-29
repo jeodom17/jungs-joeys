@@ -17,7 +17,10 @@ const resolvers = {
             const postData = await Post.find({ _id: args._id });
             return postData;
         },
-        
+        getTopics: async (parent, args) => {
+            const topicData = await Topic.find({});
+            return topicData;
+        }
     },
 
     Mutation: {
