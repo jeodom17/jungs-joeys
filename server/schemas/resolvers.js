@@ -15,11 +15,14 @@ const resolvers = {
         },
 
         getTopicByName: async (parent, args) => {
-            const postData = await Topic.find({ name: args.name});
+            const postData = await Topic.findOne({ name: args.name}).populate('posts').populate({
+                path: 'posts',
+                populate: 'comments'
+              });
             return postData;
         },
         getTopics: async (parent, args) => {
-            const topicData = await Topic.find({});
+            const topicData = await Topic.find({}).populate('posts')
             return topicData;
         }
     },
