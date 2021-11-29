@@ -54,7 +54,7 @@ const typeDefs = gql`
   type Query {
     me: User
     getPosts(topicId: ID!): [Post]
-    getPosts(name: String): [Topic]
+
   }
 
   
