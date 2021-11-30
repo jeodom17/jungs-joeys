@@ -14,12 +14,6 @@ export default function Topic() {
     variables: { name: searchParams.get("name")}
   });
 
-  useEffect(()=> {
-    console.log("EFFECT")
-    console.log(loading)
-    console.log(error)
-    console.log(data)
-  })
   console.log(searchParams.get("name"))
 
   // if data isn't here yet, say so
@@ -36,7 +30,7 @@ export default function Topic() {
       <>
       <div className="row">
       <div className="col s4">   
-        <h3>Welcome{postData}</h3>
+        <h3>{postData.name}</h3>
       </div> 
 
       <div className="col s4 offset-s4 section qmodalBtn">
@@ -46,21 +40,23 @@ export default function Topic() {
       </div>
       </div>
 
-      <div className="container">
+      {loading
+      ? <h1>TEMPORARY LOADING</h1>
+      : postData.posts.map(post => {
+      
+       return (<div className="container">
         <div class="row">
           <div class="col s12 m12">
             <div class="blue-grey darken-1">
               <div class="card-content white-text">          
               <i class="material-icons prefix col s1">account_circle</i>
-                <h5 className="col s3">User Name</h5>
+                <h5 className="col s3">{post.author.username}</h5>
                 <p className="col s2 offset-s6">Date HERE</p>
           <div class="divider"></div>
 
-                <span class="card-title col s12">Post Title</span>
+                <span class="card-title col s12">{post.question}</span>
                 <p className="col s12">
-                  Question Example - I am a very simple card. I am good at
-                  containing small bits of information. I am convenient because
-                  I require little markup to use effectively.
+                  {post.content}
                 </p>
               </div>
               
@@ -79,7 +75,8 @@ export default function Topic() {
             </div>
           </div>
         </div>
-      </div>
+      </div>)})
+      } 
     </>
   );
 }
