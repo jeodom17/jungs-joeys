@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+//* import { Link } from "react-router-dom";
 import SeeCommModal from "../components/SeeCommModal";
 import CommModal from "../components/CommModal";
 import QuesModal from "../components/QuesModal";
 import { useSearchParams } from "react-router-dom";
-import { useMutation, useQuery } from "@apollo/client";
-import { GET_ME, GET_TOPIC_BY_NAME } from "../utils/queries";
+import { useQuery } from "@apollo/client";
+import { GET_TOPIC_BY_NAME } from "../utils/queries";
 
 const Topic = () => {
   const [searchParams, setSearchParams] = useSearchParams();
