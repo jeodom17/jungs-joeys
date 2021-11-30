@@ -40,60 +40,60 @@ class SignUpForm extends Component {
   render() {
     return (
       <div className="sign">
-      <div className="formCenter">
-        <form onSubmit={this.handleSubmit} className="formFields">
-          <div className="formField">
-            <label className="formFieldLabel" htmlFor="name">
-              User_Name 
-            </label>
-            <input
-              type="name"
-              id="name"
-              className="formFieldInput"
-              placeholder="Enter your USER_NAME"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-            />
-          </div>
+        <div className="formCenter">
+          <form onSubmit={this.handleSubmit} className="formFields">
+            <div className="formField">
+              <label className="formFieldLabel" htmlFor="name">
+                UserName
+              </label>
+              <input
+                type="name"
+                id="name"
+                className="formFieldInput"
+                placeholder="Enter your USERNAME"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className="formField">
-            <label className="formFieldLabel" htmlFor="email">
-              E-Mail Address
-            </label>
-            <input
-              type="name"
-              id="email"
-              className="formFieldInput"
-              placeholder="Enter your email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </div>
+            <div className="formField">
+              <label className="formFieldLabel" htmlFor="email">
+                EMail Address
+              </label>
+              <input
+                type="name"
+                id="email"
+                className="formFieldInput"
+                placeholder="Enter your EMAIL"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className="formField">
-            <label className="formFieldLabel" htmlFor="password">
-              Password
-            </label>
-            <input
-              type="name"
-              id="password"
-              className="formFieldInput"
-              placeholder="Enter your password"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </div>
-          
+            <div className="formField">
+              <label className="formFieldLabel" htmlFor="password">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="formFieldInput"
+                placeholder="Enter your PASSWORD"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          <div className="formField">
-            <button className="formFieldButton">Sign Up</button>{" "}
-            
-          </div>
-        </form>
-      </div>
+
+            <div className="formField">
+              <button className="formFieldButton">Sign Up</button>
+
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

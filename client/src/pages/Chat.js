@@ -3,7 +3,7 @@ import Chatbox from "../components/Chat";
 
 export default function Chat() {
     return (
-        <div>
+        <div id="chat">
 
 
             <Chatbox />

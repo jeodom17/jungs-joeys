@@ -35,16 +35,16 @@ class Login extends Component {
       <div className="formCenter">
         <form className="formFields" onSubmit={this.handleSubmit}>
           <div className="formField">
-            <label className="formFieldLabel" htmlFor="email">
-              USER_NAME
+            <label className="formFieldLabel" htmlFor="name">
+              USERNAME
             </label>
             <input
               type="name"
               id="name"
               className="formFieldInput"
-              placeholder="Enter your USER_NAME"
+              placeholder="Enter your USERNAME"
               name="name"
-              value={this.state.email}
+              value={this.state.name}
               onChange={this.handleChange}
             />
           </div>
@@ -54,10 +54,10 @@ class Login extends Component {
               Password
             </label>
             <input
-              type="name"
+              type="password"
               id="password"
               className="formFieldInput"
-              placeholder="Enter your password"
+              placeholder="Enter your PASSWORD"
               name="password"
               value={this.state.password}
               onChange={this.handleChange}
