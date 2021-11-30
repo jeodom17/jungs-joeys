@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //* import { Link } from "react-router-dom";
 import SeeCommModal from "../components/SeeCommModal";
 import CommModal from "../components/CommModal";
@@ -10,10 +10,16 @@ import { GET_TOPIC_BY_NAME } from "../utils/queries";
 export default function Topic() {
   const [searchParams, setSearchParams] = useSearchParams();
   
-  const { loading, data } = useQuery(GET_TOPIC_BY_NAME, {
+  const { loading, error, data } = useQuery(GET_TOPIC_BY_NAME, {
     variables: { name: searchParams.get("name")}
   });
 
+  useEffect(()=> {
+    console.log("EFFECT")
+    console.log(loading)
+    console.log(error)
+    console.log(data)
+  })
   console.log(searchParams.get("name"))
 
   // if data isn't here yet, say so
