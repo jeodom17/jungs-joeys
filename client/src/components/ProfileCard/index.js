@@ -7,17 +7,17 @@ import "./style.css";
 export default function SideNav() {
   return (
     <>
-      <div class="card">
-        <div class="card-image">
+      <div className="card">
+        <div className="card-image">
           <img src={profileImage} alt="profile pic" className="photo"></img>
-          <div class="username">USERNAME:</div>
-          <div class="title">paulkeldsen</div>
+          <div className="username">USERNAME:</div>
+          <div className="title">paulkeldsen</div>
         </div>
-        <div class="card-content">
+        <div className="card-content">
           <p>EMAIL:</p>
-          <p class="email">paulkeldsen@gmail.com</p>
+          <p className="email">paulkeldsen@gmail.com</p>
         </div>
-        <div class="card-action">
+        <div className="card-action">
           <button>Join Chat</button>
         </div>
       </div>

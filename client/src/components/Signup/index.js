@@ -46,7 +46,7 @@ const SignupForm = () => {
   return (
     <div>
       <form className="formFields" onSubmit={handleFormSubmit}>
-
+        {/* 
         <div className="formField">
           <label className="formFieldLabel" htmlFor="name">
             Username
@@ -58,11 +58,19 @@ const SignupForm = () => {
             placeholder="Enter username"
             name="name"
             onChange={handleInputChange}
-            defaultValue=""
             value={userFormData.username}
           />
+        </div> */}
+        <div className='formField'>
         </div>
-
+        <div className='formField'>
+          <label>Username</label>
+          <input
+            className="formFieldInput"
+            placeholder='hello?'
+            onChange={handleInputChange}
+          />
+        </div>
         <div className="formField">
           <label className="formFieldLabel" htmlFor="email">
             Email

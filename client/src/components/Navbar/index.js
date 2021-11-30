@@ -19,19 +19,19 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/chat" class="header-font">
+                <Link to="/chat" className="header-font">
                   Chat
                 </Link>
               </li>
             </ul>
             <ul id="nav-mobile" className="right">
               <li>
-                <Link to="/profile" class="header-font">
+                <Link to="/profile" className="header-font">
                   Profile
                 </Link>
               </li>
               <li>
-                <Link to="/account" class="header-font">
+                <Link to="/account" className="header-font">
                   Account
                 </Link>
               </li>
