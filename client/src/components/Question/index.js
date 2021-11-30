@@ -7,7 +7,7 @@ export default function Question() {
     <div>
       <ul className="collection myposts">
         <li className="collection-item avatar">
-          <h3>POSTS</h3>
+          <h3 className="posts-header">POSTS</h3>
           <Link to="/" className="secondary-content">
             <i className="material-icons"></i>
           </Link>
