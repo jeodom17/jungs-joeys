@@ -35,8 +35,12 @@ export default function Topic() {
     return (
       <>
       <div>  
-        <h1>{postData}</h1>
+        <h3>Welcome{postData}</h3>
       </div> 
+
+      <div>
+      <QuesModal />
+      </div>
      
       <div className="container">
         <div class="row">
