@@ -33,6 +33,11 @@ db.once('open', async () => {
             const tempComment = comments[Math.floor(Math.random() * comments.length)];
             newPost.comments = tempComment._id;
             await newPost.save();
+
+            // assign an author to each post
+            const tempAuthor = users[Math.floor(Math.random() * users.length)];
+            newPost.author = tempAuthor._id;
+            await newPost.save();
         }
 
         for (topic of topics) {
@@ -40,6 +45,12 @@ db.once('open', async () => {
             const tempPost = posts[Math.floor(Math.random() * posts.length)];
             topic.posts.push(tempPost._id);
             await topic.save();
+        }
+
+        for (comment of comments) {
+            const tempAuthor = users[Math.floor(Math.random() * users.length)];
+            comment.author = tempAuthor._id;
+            await comment.save();
         }
 
         console.log('all done!');
