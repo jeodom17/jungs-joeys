@@ -15,10 +15,16 @@ const resolvers = {
         },
 
         getTopicByName: async (parent, args) => {
-            const postData = await Topic.findOne({ name: args.name}).populate('posts').populate({
+            const postData = await Topic.findOne({ name: args.name}).populate({
                 path: 'posts',
-                populate: 'comments'
-              });
+                populate: {
+                    path: 'author comments',
+                    populate: {
+                        path: 'comments',
+                        populate: 'author'
+                    }
+                }
+            });
             return postData;
         },
         getTopics: async (parent, args) => {

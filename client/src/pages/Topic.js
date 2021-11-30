@@ -14,17 +14,17 @@ export default function Topic() {
     variables: { name: searchParams.get("name")}
   });
 
+  console.log(searchParams.get("name"))
+
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING.......</h2>;
   }
   
   console.log(data)
-   const postData = data?.getTopicByName || [];
+  const postData = data?.getTopicByName || [];
   console.log(postData)
 
-  // console.log(postData)
-  
   //! useEffect(() => {
     //! console.log("HERE");
 
