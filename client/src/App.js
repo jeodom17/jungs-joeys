@@ -1,7 +1,7 @@
-import React from "react";
-import Landing from "./pages/Landing";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';import Landing from "./pages/Landing";
 import Profile from "./pages/Profile";
-import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Forum from "./pages/Forum";
@@ -11,9 +11,17 @@ import Chat from './pages/Chat';
 
 import "./App.css";
 
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
+
+
 function App() {
   return (
-    <>
+    <ApolloProvider client={client}>
+            <Router>
+
       <div className="App">
         <header>
           <Navbar />
@@ -30,7 +38,9 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+      </Router>
+
+      </ApolloProvider>
   );
 }
 

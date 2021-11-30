@@ -9,9 +9,8 @@ const typeDefs = gql`
   }
   
   type Topic {
-    topicId: ID!
+    _id: ID!
     name: String!
-    posts: [Post]
   }
 
   type Post {
@@ -53,7 +52,7 @@ const typeDefs = gql`
   type Query {
     me: User
     getTopicByName(name: String!): Topic
-    getTopics: [Topic]
+    getTopics: [Topic]!
   }
 
   type Mutation {

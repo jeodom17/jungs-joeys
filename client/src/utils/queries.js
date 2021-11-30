@@ -19,12 +19,10 @@ export const GET_ME = gql`
 `;
 
 export const GET_TOPICS = gql`
-    {
+    query getTopics{
         getTopics {
+            _id
             name
-            posts {
-                content
-            }
         }
     }
 `;

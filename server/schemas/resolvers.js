@@ -21,10 +21,10 @@ const resolvers = {
               });
             return postData;
         },
-        getTopics: async (parent, args) => {
-            const topicData = await Topic.find({}).populate('posts')
-            return topicData;
-        }
+        getTopics: async () => {
+            //* removed .populate here because it is not needed for this query....i think
+            return Topic.find();
+        },
     },
 
     Mutation: {
