@@ -34,32 +34,38 @@ export default function Topic() {
   //! })
     return (
       <>
-      <div>  
+      <div className="row">
+      <div className="col s4">   
         <h3>Welcome{postData}</h3>
       </div> 
 
-      <div>
+      <div className="col s4 offset-s4 qmodalBtn">
       <QuesModal />
       </div>
-     
+      </div>
+
       <div className="container">
         <div class="row">
           <div class="col s12 m12">
             <div class="blue-grey darken-1">
               <div class="card-content white-text">
-                <h5>User Name</h5>
-                <p>Date HERE</p>
-                <span class="card-title">Post Title</span>
-                <p>
+                <h5 className="col s3 offset-s1">User Name</h5>
+                <p className="col s2 offset-s6">Date HERE</p>
+                <span class="card-title col s12">Post Title</span>
+                <p className="col s12">
                   Question Example - I am a very simple card. I am good at
                   containing small bits of information. I am convenient because
                   I require little markup to use effectively.
                 </p>
               </div>
               <div class="card-action">
-                <span class="comments material-icons">forum</span>
+                <span class="comments material-icons col s1">forum</span>
+                <div className="col s4">
                 <SeeCommModal />
+                </div>
+                <div className="commModalBtn">
                 <CommModal />
+                </div>
               </div>
             </div>
           </div>
