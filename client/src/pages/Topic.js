@@ -32,46 +32,50 @@ const Topic = () => {
 
     return (
       <>
-        <div className="container forum-topic">
-          <div className="row forum-content">
-            <div className="col s8">
-              <h4 className="topic-header">Welcome to the {forumName} Forum</h4>
-            </div>
-            <div className="col s4">
-              <QuesModal />
-            </div>
-            <div className="col s12 m12">
-              <div className="darken-1 topic-card">
-                <div className="card-content topic-text">
-                  <h5 className="post-author">By: {postAuthor}</h5>
-                  {/* <span class="card-title">Post Title</span> */}
-                  <p>{postContent}</p>
-                </div>
-                {/* display flex on following div so that the button goes beside the input */}
-                <div className="comment-form">
-                  <div className="input-field comment-input col s8">
-                    <input
-                      id="comment_text"
-                      type="text"
-                      className="validate"
-                    ></input>
-                    <label for="textarea1">Enter your comments here</label>
+        <div className="study-topics">
+          <div className="container forum-topic">
+            <div className="row forum-content">
+              <div className="col s8">
+                <h4 className="topic-header">
+                  Welcome to the {forumName} Forum
+                </h4>
+              </div>
+              <div className="col s4">
+                <QuesModal />
+              </div>
+              <div className="col s12 m12">
+                <div className="darken-1 topic-card">
+                  <div className="card-content topic-text">
+                    <h5 className="post-author">By: {postAuthor}</h5>
+                    {/* <span class="card-title">Post Title</span> */}
+                    <p>{postContent}</p>
                   </div>
-                  <button
-                    className="btn waves-effect waves-light col s2 postBtn"
-                    type="submit"
-                    name="action"
-                  >
-                    Comment
-                    <i className="material-icons right">send</i>
-                  </button>
-                </div>
-                <div className="container comment-box card-action">
-                  <h6 className="comments-header">
-                    Comments{" "}
-                    <span className="comments material-icons">forum</span>
-                  </h6>
-                  <SeeCommModal />
+                  {/* display flex on following div so that the button goes beside the input */}
+                  <div className="comment-form">
+                    <div className="input-field comment-input col s8">
+                      <input
+                        id="comment_text"
+                        type="text"
+                        className="validate"
+                      ></input>
+                      <label for="textarea1">Enter your comments here</label>
+                    </div>
+                    <button
+                      className="btn waves-effect waves-light col s2 postBtn"
+                      type="submit"
+                      name="action"
+                    >
+                      Comment
+                      <i className="material-icons right">send</i>
+                    </button>
+                  </div>
+                  <div className="container comment-box card-action">
+                    <h6 className="comments-header">
+                      Comments{" "}
+                      <span className="comments material-icons">forum</span>
+                    </h6>
+                    <SeeCommModal />
+                  </div>
                 </div>
               </div>
             </div>

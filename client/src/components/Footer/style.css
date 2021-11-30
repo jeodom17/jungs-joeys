@@ -1,0 +1,22 @@
+.footer-color {
+  background-color: #7b3115;
+}
+
+.footer {
+  display: block;
+  padding: 5vh 0vh;
+  height: 10vh;
+  width: 100%;
+}
+
+.style {
+  text-align: center;
+  height: 10vh;
+  width: auto;
+}
+
+.size {
+  padding: 1rem 1rem;
+  width: 5rem;
+  height: 5rem;
+}
