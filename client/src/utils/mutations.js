@@ -87,3 +87,27 @@ export const REMOVE_COMMENT = gql`
         }
     }
 `;
+
+export const CREATE_COMMENT = gql`
+  mutation createComment($content: String!, $author: User!, $upvotes: Int!) {
+    createComment(content: $content) {
+      comment {
+        content
+        author {
+          username
+        }
+        upvotes
+      }
+    }
+  }
+`;
+
+export const CREATE_POST = gql`
+  mutation createPost($content: String!, $author: User!, $topic: Topic!) {
+    createPost(content: $content, author: $author, topic: $topic) {
+      postId
+      content
+      
+    }
+  }
+`;
