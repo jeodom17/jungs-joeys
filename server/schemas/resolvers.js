@@ -21,12 +21,8 @@ const resolvers = {
                     {
                     path: 'author',
                     model: 'User'
-<<<<<<< Updated upstream
                     },
                     {
-=======
-                }, {
->>>>>>> Stashed changes
                     path: 'comments',
                     model: 'Comment',
                     populate: {
@@ -34,10 +30,6 @@ const resolvers = {
                         model: 'User'
                         }
                     }
-<<<<<<< Updated upstream
-=======
-                }
->>>>>>> Stashed changes
                 ]
             });
             return postData;

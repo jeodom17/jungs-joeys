@@ -27,7 +27,8 @@ const Topic = () => {
   for (let i=0; i<postArray.length; i++) {
     
     const postContent = postData.posts[i].content;
-    const postAuthor = postData.posts[i].author;
+    const postAuthor = postData.posts[i].author.username;
+    console.log(postAuthor)
 
     return (
       <>
@@ -44,14 +45,33 @@ const Topic = () => {
             <div class="col s12 m12">
               <div class="blue-grey darken-1">
                 <div class="card-content white-text">
-                  <h5>By: {postAuthor} ... fix post Author</h5>
-                  <span class="card-title">Post Title</span>
+                  <h5>By: {postAuthor}</h5>
+                  {/* <span class="card-title">Post Title</span> */}
                   <p>
                     {postContent}
                   </p>
                 </div>
+                {/* display flex on following div so that the button goes beside the input */}
+                <div className = "commentForm"> 
+                  <div class="input-field commInput">
+                    <textarea
+                      id="textarea1"
+                      class="materialize-textarea"
+                    ></textarea>
+                    <label for="textarea1">Enter your comments here</label>
+                  </div>
+                  <button
+                    class="btn waves-effect waves-light col s6 postBtn"
+                    type="submit"
+                    name="action"
+                  >
+                    Comment
+                    <i class="material-icons right">send</i>
+                  </button>
+                </div>
                 <div class="card-action">
                   <span class="comments material-icons">forum</span>
+                  <h6>Comments</h6>
                   <SeeCommModal />
                   <CommModal />
                 </div>
