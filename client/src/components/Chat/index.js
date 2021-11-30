@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { VideoSDKMeeting } from "@videosdk.live/rtc-js-prebuilt";
+import logo from "../../assets/jungaroo.png";
 
 export default function Chatbox() {
     useEffect(() => {
@@ -13,7 +14,7 @@ export default function Chatbox() {
             apiKey: apiKey,
 
             containerId: null,
-            redirectOnLeave: "http://localhost:3000/chat",
+            redirectOnLeave: "http://localhost:3000/",
 
             micEnabled: true,
             webcamEnabled: true,
@@ -32,8 +33,8 @@ export default function Chatbox() {
             participantCanToggleRecording: true,
 
             brandingEnabled: true,
-            brandLogoURL: "https://picsum.photos/200",
-            brandName: "Awesome startup",
+            brandLogoURL: logo,
+            brandName: "Jung's Joeys",
 
             participantCanLeave: true, // if false, leave button won't be visible
 
@@ -69,5 +70,5 @@ export default function Chatbox() {
         meeting.init(config);
     }, []);
 
-    return <div></div>;
+    return <div id='chat'></div>;
 }
