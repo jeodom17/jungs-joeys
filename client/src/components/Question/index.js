@@ -13,7 +13,7 @@ export default function Question() {
           </Link>
         </li>
       </ul>
-      <ul className="collection">
+      <ul className="collection myquestions">
         <li className="collection-item avatar">
           <i className="material-icons circle">folder</i>
           <p className="topics">TOPIC:</p>

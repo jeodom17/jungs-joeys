@@ -16,7 +16,7 @@
 .landing-header {
   background-image: url("../../assets/jungaroo.png");
   background-position: center;
-  background-size: contain 50vh;
+  background-size: 40vh;
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;

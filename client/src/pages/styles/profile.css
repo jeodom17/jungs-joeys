@@ -7,11 +7,12 @@
 }
 
 .side {
-  width: 20vw;
-  padding: 2.5rem 0rem;
+  align-content: center;
+  padding: 2rem 0rem;
 }
 
 .posts {
+  align-content: center;
   width: 60vw;
   padding: 2rem 0rem 0rem 2rem;
 }
@@ -27,5 +28,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .posts {
+    width: auto;
+    padding: 0rem;
   }
 }
