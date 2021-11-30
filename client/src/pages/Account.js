@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Login from "../components/Login";
 import SignUpForm from "../components/Signup";
 
@@ -236,21 +236,21 @@ export default function Account() {
     });
     return isValid;
   }
-    return (
-      <div className="App1">
+  return (
+    <div className="App1">
       <div className="appAside bgImg" />
       <div className="appForm">
         <div className="pageSwitcher">
           <div
-            activeClassName="pageSwitcherItem-active"
+            activeclassname="pageSwitcherItem-active"
             className={useLogin ? "pageSwitcherItem-active pageSwitcherItem" : "pageSwitcherItem"}
             onClick={() => toggleLogin(true)}
           >
             Sign In
           </div>
           <div
-  
-            activeClassName="pageSwitcherItem-active"
+
+            activeclassname="pageSwitcherItem-active"
             className={useLogin ? "pageSwitcherItem" : "pageSwitcherItem-active pageSwitcherItem"}
             onClick={() => toggleLogin(false)}
           >
@@ -260,8 +260,8 @@ export default function Account() {
 
         <div className="formTitle">
           <div
-            
-            activeClassName="formTitleLink-active"
+
+            activeclassname="formTitleLink-active"
             className={useLogin ? "formTitleLink-active formTitleLink" : "formTitleLink"}
             onClick={() => toggleLogin(true)}
           >
@@ -269,8 +269,8 @@ export default function Account() {
           </div>{" "}
           or{" "}
           <div
-          
-            activeClassName="formTitleLink-active"
+
+            activeclassname="formTitleLink-active"
             className={useLogin ? "formTitleLink" : "formTitleLink-active formTitleLink"}
             onClick={() => toggleLogin(false)}
           >
@@ -288,13 +288,13 @@ export default function Account() {
               stateFormMessage,
             } */}
 
-            {/* use something like this below */}
+        {/* use something like this below */}
 
-      {useLogin ? <Login /> : <SignUpForm/>}
-        
+        {useLogin ? <Login /> : <SignUpForm />}
+
       </div>
     </div>
-      
 
-    );
- }
+
+  );
+}

@@ -34,8 +34,8 @@ class QuesModal extends Component {
     // instance.close();
     // instance.destroy();
   }
-   PostForm = () => {
-    
+  PostForm = () => {
+
   };
 
   render() {
@@ -65,30 +65,30 @@ class QuesModal extends Component {
             <div>
               <h4>Post Question and Details below</h4>
             </div>
-            <div class="divider"></div>
+            <div className="divider"></div>
             <div className="container">
-              <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <div class="input-field col s12">
+              <div className="row">
+                <form className="col s12">
+                  <div className="row">
+                    <form className="col s12">
+                      <div className="row">
+                        <div className="input-field col s12">
                           <textarea
                             id="textarea1"
-                            class="materialize-textarea"
+                            className="materialize-textarea"
                           ></textarea>
                           <label for="textarea1">Question Title</label>
                         </div>
                       </div>
                     </form>
                   </div>
-                  <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <div class="input-field col s12">
+                  <div className="row">
+                    <form className="col s12">
+                      <div className="row">
+                        <div className="input-field col s12">
                           <textarea
                             id="textarea1"
-                            class="materialize-textarea"
+                            className="materialize-textarea"
                           ></textarea>
                           <label for="textarea1">
                             Question details and Examples
@@ -102,17 +102,17 @@ class QuesModal extends Component {
             </div>
           </div>
 
-          <div class="divider"></div>
+          <div className="divider"></div>
 
           <div className="container">
             <div className="modal-footer">
               <button
-                class="btn waves-effect waves-light col s6"
+                className="btn waves-effect waves-light col s6"
                 type="submit"
                 name="action"
               >
                 Submit Question
-                <i class="material-icons right">send</i>
+                <i className="material-icons right">send</i>
               </button>
               <a className="modal-close waves-effect waves-light btn">Close</a>
             </div>
