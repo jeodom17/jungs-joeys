@@ -37,21 +37,23 @@ const Forum = () => {
   const topicData = data?.getTopics || [];
 
   return (
-    <div className="topics container">
-      <ul className="collection with-header topics-border">
-        <li className="collection-header">
-          <h3 className="select-topic">SELECT A TOPIC</h3>
-        </li>
-        {loading ? (
-          <div className="topic-loading">Loading...</div>
-        ) : (
-          <div className="codetopic">
-            {topicData.map((topic) => (
-              <Category name={topic.name} />
-            ))}
-          </div>
-        )}
-      </ul>
+    <div className="study-forum">
+      <div className="topics container">
+        <ul className="collection with-header topics-border">
+          <li className="collection-header">
+            <h3 className="select-topic">SELECT A TOPIC</h3>
+          </li>
+          {loading ? (
+            <div className="topic-loading">Loading...</div>
+          ) : (
+            <div className="codetopic">
+              {topicData.map((topic) => (
+                <Category name={topic.name} />
+              ))}
+            </div>
+          )}
+        </ul>
+      </div>
     </div>
   );
 };

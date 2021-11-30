@@ -1,7 +1,6 @@
 .myposts {
   text-align: left;
-  border: 5px solid #55423d;
-  border-radius: 25px;
+  border: 3px solid #55423d;
   min-width: 350px;
 }
 
@@ -13,6 +12,7 @@
 .posts-header {
   font-weight: bold;
   text-decoration: underline;
+  text-align: center;
   color: #271c19;
 }
 
