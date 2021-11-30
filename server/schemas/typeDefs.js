@@ -11,6 +11,7 @@ const typeDefs = gql`
   type Topic {
     _id: ID!
     name: String!
+    posts: [Post]
   }
 
   type Post {
