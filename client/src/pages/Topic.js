@@ -7,76 +7,58 @@ import { useSearchParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_TOPIC_BY_NAME } from "../utils/queries";
 
-export default function Topic() {
+const Topic = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const { loading, error, data } = useQuery(GET_TOPIC_BY_NAME, {
     variables: { name: searchParams.get("name")}
   });
 
-  console.log(searchParams.get("name"))
-
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING.......</h2>;
   }
   
-  console.log(data)
   const postData = data?.getTopicByName || [];
-  console.log(postData)
+  // console.log(postData.posts[0].content)
+  const postArray = postData.posts
+  const postContent = postData.posts[0].content;
+  const postAuthor = postData.posts[0].author;
 
+  //! useEffect(() => {
+    //! console.log("HERE");
+
+    //* use searchParams.get("name") in a graphQL call to the Topic db to populate page with the correct questions
+    //* need to use useQuery with the correct queries and typedefs to get the topics to populate here
+    // console.log(searchParams.get("name"))
+  //! })
   
+  for (let i=0; i<postArray.length; i++) {
     return (
       <>
-      <div className="row">
-      <div className="col s4">   
-        <h3>{postData.name}</h3>
-      </div> 
-
-      <div className="col s4 offset-s4 section qmodalBtn">
-
-      <QuesModal />
-
-      </div>
-      </div>
-
-      {loading
-      ? <h1>TEMPORARY LOADING</h1>
-      : postData.posts.map(post => {
-      
-       return (<div className="container">
-        <div class="row">
-          <div class="col s12 m12">
-            <div class="blue-grey darken-1">
-              <div class="card-content white-text">          
-              <i class="material-icons prefix col s1">account_circle</i>
-                <h5 className="col s3">{post.author.username}</h5>
-                <p className="col s2 offset-s6">Date HERE</p>
-          <div class="divider"></div>
-
-                <span class="card-title col s12">{post.question}</span>
-                <p className="col s12">
-                  {post.content}
-                </p>
-              </div>
-              
-              <div class="card-action">
-                <span class="comments material-icons col s1">forum</span>
-                
-                <div className="col s4">
-                <SeeCommModal />
+        <div className="container">
+          <div class="row">
+            <div class="col s12 m12">
+              <div class="blue-grey darken-1">
+                <div class="card-content white-text">
+                  <h5>By: {postAuthor} ... fix post Author</h5>
+                  <span class="card-title">Post Title</span>
+                  <p>
+                    {postContent}
+                  </p>
                 </div>
-
-                <div className="commModalBtn">
-                <CommModal />
+                <div class="card-action">
+                  <span class="comments material-icons">forum</span>
+                  <SeeCommModal />
+                  <CommModal />
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-      </div>)})
-      } 
-    </>
-  );
+      </>
+    )
+  }
 }
+
+export default Topic;
