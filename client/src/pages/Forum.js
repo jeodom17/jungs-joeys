@@ -40,11 +40,9 @@ const Forum = () => {
 
 
     return (
-      <div className="topics">
+      <div className="container topics">
         <ul className="collection with-header">
           <li className="collection-header"><h3>Select a Topic Below</h3></li>
-            <Category name="Career" />
-            <br />
          {loading ? 
          <div className="topic-loading" >Loading...</div> 
          :
