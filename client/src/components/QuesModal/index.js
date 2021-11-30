@@ -88,14 +88,6 @@ class QuesModal extends Component {
                             Question details and Examples
                           </label>
                         </div>
-                        <button
-                          class="btn waves-effect waves-light col s6 push-s3"
-                          type="submit"
-                          name="action"
-                        >
-                          Submit Question
-                          <i class="material-icons right">send</i>
-                        </button>
                       </div>
                     </form>
                   </div>
@@ -104,12 +96,21 @@ class QuesModal extends Component {
             </div>
           </div>
 
+          <div class="divider"></div>
+
           <div className="container">
             <div className="modal-footer">
+              <button
+                class="btn waves-effect waves-light col s6"
+                type="submit"
+                name="action"
+              >
+                Submit Question
+                <i class="material-icons right">send</i>
+              </button>
               <a className="modal-close waves-effect waves-light btn">Close</a>
             </div>
           </div>
-
         </div>
       </div>
     );

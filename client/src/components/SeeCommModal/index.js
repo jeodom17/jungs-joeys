@@ -55,12 +55,12 @@ class SeeCommModal extends Component {
                         modal-fixed-footer to the "modal" div*/}
           <div className="modal-content">
             <h4>Comments for:</h4>
+          <div class="divider"></div>
+
             <p>COMMENTS ON POST POPULATED HERE</p>
           </div>
+          <div class="divider"></div>
           <div className="modal-footer">
-            <a className="modal-close waves-effect waves-red btn">
-              Disagree
-            </a>
             <a className="modal-close waves-effect waves-red btn">
               Close
             </a>

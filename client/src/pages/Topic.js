@@ -48,6 +48,8 @@ export default function Topic() {
               <i class="material-icons prefix col s1">account_circle</i>
                 <h5 className="col s3">User Name</h5>
                 <p className="col s2 offset-s6">Date HERE</p>
+          <div class="divider"></div>
+
                 <span class="card-title col s12">Post Title</span>
                 <p className="col s12">
                   Question Example - I am a very simple card. I am good at

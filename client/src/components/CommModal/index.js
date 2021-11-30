@@ -59,36 +59,38 @@ class CommModal extends Component {
           </div>
 
           <div class="divider"></div>
-          
+
           <div className="container"></div>
+
+          
           <div class="row">
             <form class="col s12">
               <div class="row">
-                <div class="input-field col s10 push-s1">
+                <div class="input-field col s10 commInput">
                   <textarea
                     id="textarea1"
                     class="materialize-textarea"
                   ></textarea>
                   <label for="textarea1">Enter your comments here</label>
                 </div>
-                <button
-                  class="btn waves-effect waves-light col s6 push-s3"
-                  type="submit"
-                  name="action"
-                >
-                  Post Comments
-                  <i class="material-icons right">send</i>
-                </button>
               </div>
             </form>
           </div>
-          </div>
+
+          <div class="divider"></div>
+
           <div>
-          <div className="modal-footer">
-            <a className="modal-close waves-effect waves-red btn-flat">
-              Disagree
-            </a>
-            <a className="modal-close waves-effect waves-green btn">Close</a>
+            <div className="modal-footer">
+              <button
+                class="btn waves-effect waves-light col s6 postBtn"
+                type="submit"
+                name="action"
+              >
+                Post Comments
+                <i class="material-icons right">send</i>
+              </button>
+              <a className="modal-close waves-effect waves-green btn">Close</a>
+            </div>
           </div>
         </div>
       </div>
