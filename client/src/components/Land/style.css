@@ -1,5 +1,10 @@
 .landing {
   text-align: center;
+  /* background-image: url("../../assets/desert.png");
+  background-position: center;
+  background-size: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 .landing-logo {
