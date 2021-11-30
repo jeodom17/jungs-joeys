@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Category from "../components/Category";
-import "./styles/forum.css"
+import "./styles/forum.css";
 
 import { useQuery } from "@apollo/client";
 import { GET_TOPICS } from "../utils/queries";
@@ -8,7 +8,7 @@ import { GET_TOPICS } from "../utils/queries";
 const CATEGORY_TOPICS = [
   "Unit 1 - HTML, Git, CSS",
   "Unit 2 - Advanced CSS",
-  "unit 3 - JavaScript",
+  "Unit 3 - JavaScript",
   "Unit 4 - Web APIs",
   "Unit 5 - Third Party APIs",
   "Unit 6 - Server Side APIs",
@@ -33,29 +33,27 @@ const CATEGORY_TOPICS = [
 ];
 
 const Forum = () => {
-
-
-    const  {loading, error, data} =  useQuery(GET_TOPICS);
+  const { loading, error, data } = useQuery(GET_TOPICS);
   const topicData = data?.getTopics || [];
 
-
-    return (
-      <div className="topics">
-        <ul className="collection with-header">
-          <li className="collection-header"><h3>Select a Topic Below</h3></li>
-            <Category name="Career" />
-            <br />
-         {loading ? 
-         <div className="topic-loading" >Loading...</div> 
-         :
+  return (
+    <div className="topics container">
+      <ul className="collection with-header topics-border">
+        <li className="collection-header">
+          <h3 className="select-topic">SELECT A TOPIC</h3>
+        </li>
+        {loading ? (
+          <div className="topic-loading">Loading...</div>
+        ) : (
           <div className="codetopic">
-          {topicData.map(topic => <Category name={topic.name} />)}
-        </div>}
-        </ul>
-      </div>
-    );
-  }
+            {topicData.map((topic) => (
+              <Category name={topic.name} />
+            ))}
+          </div>
+        )}
+      </ul>
+    </div>
+  );
+};
 
-  export default Forum;
-
-
+export default Forum;

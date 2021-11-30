@@ -1,11 +1,19 @@
 .myposts {
   text-align: left;
-  border: 5px solid #271c19;
+  border: 5px solid #55423d;
   border-radius: 25px;
+  min-width: 350px;
 }
 
-h3 {
+.myquestions {
+  text-align: left;
+  min-width: 350px;
+}
+
+.posts-header {
+  font-weight: bold;
   text-decoration: underline;
+  color: #271c19;
 }
 
 .topics {
