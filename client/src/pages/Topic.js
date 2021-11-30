@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+//* import { Link } from "react-router-dom";
 import SeeCommModal from "../components/SeeCommModal";
 import CommModal from "../components/CommModal";
 import QuesModal from "../components/QuesModal";
 import { useSearchParams } from "react-router-dom";
-import { useMutation, useQuery } from "@apollo/client";
-import { GET_ME, GET_TOPIC_BY_NAME } from "../utils/queries";
+import { useQuery } from "@apollo/client";
+import { GET_TOPIC_BY_NAME } from "../utils/queries";
 
 export default function Topic() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -25,13 +25,7 @@ export default function Topic() {
   const postData = data?.getTopicByName || [];
   console.log(postData)
 
-  //! useEffect(() => {
-    //! console.log("HERE");
-
-    //* use searchParams.get("name") in a graphQL call to the Topic db to populate page with the correct questions
-    //* need to use useQuery with the correct queries and typedefs to get the topics to populate here
-    // console.log(searchParams.get("name"))
-  //! })
+  
     return (
       <>
       <div className="row">
@@ -39,8 +33,10 @@ export default function Topic() {
         <h3>Welcome{postData}</h3>
       </div> 
 
-      <div className="col s4 offset-s4 qmodalBtn">
+      <div className="col s4 offset-s4 section qmodalBtn">
+
       <QuesModal />
+
       </div>
       </div>
 
@@ -48,8 +44,9 @@ export default function Topic() {
         <div class="row">
           <div class="col s12 m12">
             <div class="blue-grey darken-1">
-              <div class="card-content white-text">
-                <h5 className="col s3 offset-s1">User Name</h5>
+              <div class="card-content white-text">          
+              <i class="material-icons prefix col s1">account_circle</i>
+                <h5 className="col s3">User Name</h5>
                 <p className="col s2 offset-s6">Date HERE</p>
                 <span class="card-title col s12">Post Title</span>
                 <p className="col s12">
@@ -58,13 +55,19 @@ export default function Topic() {
                   I require little markup to use effectively.
                 </p>
               </div>
+              
               <div class="card-action">
                 <span class="comments material-icons col s1">forum</span>
                 <div className="col s4">
+
                 <SeeCommModal />
+
                 </div>
+
                 <div className="commModalBtn">
+
                 <CommModal />
+
                 </div>
               </div>
             </div>
