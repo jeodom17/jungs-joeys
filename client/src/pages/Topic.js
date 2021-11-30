@@ -60,17 +60,15 @@ export default function Topic() {
               
               <div class="card-action">
                 <span class="comments material-icons col s1">forum</span>
+                
                 <div className="col s4">
-
                 <SeeCommModal />
-
                 </div>
 
                 <div className="commModalBtn">
-
                 <CommModal />
-
                 </div>
+
               </div>
             </div>
           </div>

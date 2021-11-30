@@ -54,7 +54,7 @@ class SeeCommModal extends Component {
                         If you want Fixed Footer Modal then add
                         modal-fixed-footer to the "modal" div*/}
           <div className="modal-content">
-            <h4>Comments for:</h4>
+            <h4 className="center-align">Comments for:</h4>
           <div class="divider"></div>
 
             <p>COMMENTS ON POST POPULATED HERE</p>

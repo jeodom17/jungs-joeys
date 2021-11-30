@@ -34,39 +34,41 @@ class CommModal extends Component {
 
   render() {
     return (
+    <>
+     <div className="container"></div>
       <div className="row">
-        <a
+         <a
           className="qModBtn waves-effect waves-light btn modal-trigger"
           data-target="modal3"
-        >
-          Add a Comment &nbsp;&nbsp;&nbsp;
+         >
+          Add a Comment 
           <i class="add-comment material-icons">insert_comment</i>
-        </a>
+         </a>
 
-        <div
+         <div
           ref={(Modal) => {
             this.Modal = Modal;
           }}
           id="modal3"
           className="modal"
-        >
+         >
           {/* If you want Bottom Sheet Modal then add 
                         bottom-sheet class to the "modal" div
                         If you want Fixed Footer Modal then add
                         modal-fixed-footer to the "modal" div*/}
+        <div className="container">
           <div className="modal-content">
-            <h5>Add Your Comment Below</h5>
-          </div>
+            <h5 className="center-align">Add Your Comment Below</h5>
+          
 
           <div class="divider"></div>
 
-          <div className="container"></div>
 
-          
+         <div className="container">
           <div class="row">
-            <form class="col s12">
+            <form class="col s12 push-s1">
               <div class="row">
-                <div class="input-field col s10 commInput">
+                <div class="input-field commInput">
                   <textarea
                     id="textarea1"
                     class="materialize-textarea"
@@ -76,11 +78,11 @@ class CommModal extends Component {
               </div>
             </form>
           </div>
-
+          </div>
+          </div>
+        </div>
           <div class="divider"></div>
-
-          <div>
-            <div className="modal-footer">
+          <div className="modal-footer">
               <button
                 class="btn waves-effect waves-light col s6 postBtn"
                 type="submit"
@@ -91,9 +93,9 @@ class CommModal extends Component {
               </button>
               <a className="modal-close waves-effect waves-green btn">Close</a>
             </div>
-          </div>
         </div>
       </div>
+    </>
     );
   }
 }
