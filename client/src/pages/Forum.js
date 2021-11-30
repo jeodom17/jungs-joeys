@@ -33,22 +33,21 @@ const CATEGORY_TOPICS = [
 ];
 
 export default function Forum() {
-  const { data } = useQuery(GET_TOPICS);
+  const { loading, data } = useQuery(GET_TOPICS);
   console.log(data)
   const topicData = data?.getTopics || [];
-
   console.log(topicData)
 
-    return (
-      <div className="topics">
-        <ul className="collection with-header">
-          <li className="collection-header"><h3>Select a Topic Below</h3></li>
-            <Category name="Career" />
-            <br />
-          <div className="codetopic">
-            {CATEGORY_TOPICS.map(topic => <Category name={topic} />)}
-          </div>
-        </ul>
-      </div>
-    );
-  }
+  return (
+    <div className="topics">
+      <ul className="collection with-header">
+        <li className="collection-header"><h3>Select a Topic Below</h3></li>
+          <Category name="Career" />
+          <br />
+        <div className="codetopic">
+          {CATEGORY_TOPICS.map(topic => <Category name={topic} />)}
+        </div>
+      </ul>
+    </div>
+  );
+}
