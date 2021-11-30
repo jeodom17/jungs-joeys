@@ -9,12 +9,14 @@ import "./styles/profile.css";
 
 export default function Profile() {
   return (
-    <div className="layout container">
-      <div className="side">
-        <SideNav />
-      </div>
-      <div className="posts">
-        <Question />
+    <div className="user-profile">
+      <div className="layout container">
+        <div className="side">
+          <SideNav />
+        </div>
+        <div className="posts">
+          <Question />
+        </div>
       </div>
     </div>
   );

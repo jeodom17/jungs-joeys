@@ -19,15 +19,23 @@ const resolvers = {
                 path: 'posts',
                 populate: [
                     {
-                    path: 'author',
-                    model: 'User'
-                    },
-                    {
-                    path: 'comments',
-                    model: 'Comment',
-                    populate: {
                         path: 'author',
                         model: 'User'
+                    },
+                    {
+                        path: 'comments',
+                        model: 'Comment',
+                        populate: {
+                            path: 'author',
+                            model: 'User'
+                        },
+                    },
+                    {
+                        path: 'comments',
+                        model: 'Comment',
+                        populate: {
+                            path: 'author',
+                            model: 'User'
                         }
                     }
                 ]
@@ -42,22 +50,30 @@ const resolvers = {
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
+
+            if (!user) {
+                throw new AuthenticationError('user not created');
+            }
             const token = signToken(user);
+
+            if (!token) {
+                throw new AuthenticationError('token not signed');
+            }
 
             return { token, user };
         },
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
-
+            console.log(password)
             if (!user) {
                 throw new AuthenticationError('No user exists');
             }
 
             const correctPw = await user.isCorrectPassword(password);
-
-            if (!correctPw) {
-                throw new AuthenticationError('Incorrect password');
-            }
+            console.log(correctPw)
+            // if (!correctPw) {
+            //     throw new AuthenticationError('Incorrect password');
+            // }
 
             const token = signToken(user);
             return { token, user };

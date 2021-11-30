@@ -8,45 +8,49 @@ import { useSearchParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ME } from "../../utils/queries"
 
+
+
+//   //* const userArray = userData.users
+  
+//   //* for (let i=0; i<userArray.length; i++) {
+    
+
+
 export default function SideNav() {
+
   const [searchParams, setSearchParams] = useSearchParams();
-  const username = searchParams.get("name");
+    const profile = searchParams.get("username");
+  
+    const { loading, error, data } = useQuery(GET_ME, {
+      variables: { username: searchParams.get("username")}
+    });
 
-  const { loading, error, data } = useQuery(GET_ME, {
-    variables: { name: searchParams.get("name")}
-  });
-// if data isn't here yet, say so
-if (loading) {
-  return <h2>LOADING.......</h2>;
-}
-
-const userData = data?.me || [];
+    if (loading) {
+         return <h2>LOADING.......</h2>;
+      }
+      const userData = data?.me || [];
 
 console.log(userData);
 
-  //* const userArray = userData.users
-  
-  //* for (let i=0; i<userArray.length; i++) {
-    
-    const userName = userData.me.userName;
+
+    const username = userData.me.username;
     const userEmail = userData.me.email;
     
     console.log(userEmail)
 
-
   return (
     <>
-      <div class="card">
-        <div class="card-image">
+      <div className="card">
+        <div className="card-image">
           <img src={profileImage} alt="profile pic" className="photo"></img>
-          <div class="username"> User: </div>
-          <div class="title"> {userName} </div>
+          <div class="username"> User:{username} </div>
+          <div class="title"> {profile} </div>
         </div>
         <div class="card-content">
           <p>EMAIL:  </p>
-          <p class="email"> {userEmail} </p>
+          <p class="email"> userEmail </p>
         </div>
-        <div class="card-action">
+        <div className="card-action">
           <button>Join Chat</button>
         </div>
       </div>

@@ -17,6 +17,7 @@ const SignupForm = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
+    console.log(userFormData.username)
   };
 
   const handleFormSubmit = async (event) => {
@@ -46,23 +47,16 @@ const SignupForm = () => {
   return (
     <div>
       <form className="formFields" onSubmit={handleFormSubmit}>
-
-        <div className="formField">
-          <label className="formFieldLabel" htmlFor="name">
-            Username
-          </label>
+        <div className='formField'>
+          <label className="formFieldLabel">Username</label>
           <input
             type="name"
-            id="name"
-            className="formFieldInput"
-            placeholder="Enter username"
             name="name"
+            className="formFieldInput"
+            placeholder='Enter username'
             onChange={handleInputChange}
-            defaultValue=""
-            value={userFormData.username}
           />
         </div>
-
         <div className="formField">
           <label className="formFieldLabel" htmlFor="email">
             Email

@@ -1,0 +1,60 @@
+.study-topics {
+  background-image: url("../../assets/desert-forum.png");
+  background-position: center;
+  background-size: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+.forum-topic {
+  padding: 2rem 0rem;
+}
+
+.forum-content {
+  background-color: #ffffff;
+  border: 5px solid #55423d;
+  border-radius: 25px;
+  padding: 2rem 1rem;
+}
+
+.topic-header {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #271c19;
+}
+
+.post-author {
+  font-weight: bold;
+}
+
+.topic-card {
+  background-color: #fff3ec;
+  border: 1px solid #55423d;
+}
+
+.topic-text {
+  padding: 1rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  size: 100px;
+  border-top: 1px solid #55423d;
+  padding: 0rem 1rem;
+}
+
+.comments-header {
+  font-weight: bold;
+}
+
+.comment-box {
+  padding: 0rem 1rem;
+}
+
+.postBtn {
+  min-width: 100px;
+  background-color: #ef9511;
+}

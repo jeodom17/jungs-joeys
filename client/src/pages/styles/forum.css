@@ -1,12 +1,38 @@
+.study-forum {
+  background-image: url("../../assets/desert-forum.png");
+  background-position: center;
+  background-size: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+.topics {
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+.topics-border {
+  border: 5px solid #55423d;
+  border-radius: 25px;
+}
+
+.select-topic {
+  font-weight: bolder;
+  color: #271c19;
+}
 
 .codetopic {
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    background-color: #f1f1f1;
+  height: 525px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 800px) {
+  .codetopic {
+    height: 1025px;
   }
-
-
-
+}
