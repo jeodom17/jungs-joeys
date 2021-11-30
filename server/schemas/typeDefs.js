@@ -7,19 +7,18 @@ const typeDefs = gql`
     email: String!
     posts: [Post]
   }
-
   
   type Topic {
-    topicId: ID!
-    question: String!
+    _id: ID!
+    name: String!
     posts: [Post]
   }
 
- 
   type Post {
     postId: ID!
     author: User
     topic: Topic!
+    question: String!
     content: String!
     comments: [Comment]
   }
@@ -46,6 +45,7 @@ const typeDefs = gql`
   input PostInput {
     postId: ID!
     topic: String!
+    question: String!
     content: String!
     comments: [String]
   }
@@ -53,7 +53,7 @@ const typeDefs = gql`
   type Query {
     me: User
     getTopicByName(name: String!): Topic
-    getTopics: [Topic]
+    getTopics: [Topic]!
   }
 
   type Mutation {

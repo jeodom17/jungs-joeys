@@ -19,26 +19,20 @@ export const GET_ME = gql`
 `;
 
 export const GET_TOPICS = gql`
-    {
+    query getTopics{
         getTopics {
+            _id
             name
-            question
-            posts {
-                content
-                author {
-                    username
-                }
-            }
         }
     }
 `;
 
 export const GET_TOPIC_BY_NAME = gql`
-query getTopicByName($name: String) {
+query getTopicByName($name: String!) {
     getTopicByName(name: $name) {
         name
-        question
         posts {
+            question
             content
             author {
                 username

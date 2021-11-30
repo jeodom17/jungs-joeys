@@ -11,14 +11,10 @@ const topicSchema = new Schema(
       type: String,
       required: true
     },
-    question: {
-      type: String,
-      required: true
-    },
     posts: [{
       type: Schema.Types.ObjectId,
       ref: 'Post'
-    }]
+    }],
   },
 );
 

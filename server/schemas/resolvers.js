@@ -15,13 +15,27 @@ const resolvers = {
         },
 
         getTopicByName: async (parent, args) => {
-            const postData = await Topic.find({ name: args.name});
+            const postData = await Topic.findOne({ name: args.name}).populate({
+                path: 'posts',
+                populate: [{
+                    path: 'author',
+                    model: 'User'
+                },{
+                    path: 'comments',
+                    model: 'Comment',
+                    populate: {
+                        path: 'author',
+                        model: 'User'
+                    }
+                }
+            ]
+            });
             return postData;
         },
-        getTopics: async (parent, args) => {
-            const topicData = await Topic.find({});
-            return topicData;
-        }
+        getTopics: async () => {
+            //* removed .populate here because it is not needed for this query....i think
+            return Topic.find();
+        },
     },
 
     Mutation: {

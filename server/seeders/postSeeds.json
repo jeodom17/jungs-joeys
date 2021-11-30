@@ -1,14 +1,18 @@
 [
     {
-        "content": "random post 1"
+        "question":"rand ? # 1",
+        "content": "random content 1"
     },
     {
-        "content": "random post 2"
+        "question":"rand ? # 2",
+        "content": "random content 2"
     },
     {
-        "content": "random post 3"
+        "question":"rand ? # 3",
+        "content": "random content 3"
     },
     {
-        "content": "random post 4"
+        "question":"rand ? # 4",
+        "content": "random content 4"
     }
 ]
