@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import Forum from "./pages/Forum";
 import Topic from "./pages/Topic";
 import Account from "./pages/Account";
-import Chat from './pages/Chat';
+import Chat from "./pages/Chat";
 
 import "./App.css";
 

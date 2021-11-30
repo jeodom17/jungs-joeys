@@ -1,43 +1,55 @@
-
-
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    margin-top: 0%;
-    margin-right: 5px;
-  }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  min-width: 300px;
+  margin: auto;
+  text-align: center;
+  margin-right: 10px;
+  border: 5px solid #271c19;
+  padding: 10px;
+  border-radius: 25px;
+}
 
-  .photo {
-    width:250px;
-    height:350px;
-  }
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
-  }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
-  }
+.username,
+.email {
+  color: #000000;
+  font-size: 15px;
+}
+.title {
+  color: #000000;
+  font-size: 25px;
+}
+
+.content {
+  color: #000000;
+  font-size: 20px;
+}
+
+.photo {
+  width: 250px;
+  height: 350px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
