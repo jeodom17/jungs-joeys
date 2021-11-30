@@ -41,9 +41,9 @@ class QuesModal extends Component {
   render() {
     return (
       <div className="container">
-        <div>
+        <div className="valign-wrapper">
           <a
-            className="qModBtn waves-effect waves-light btn modal-trigger"
+            className="qModBtn waves-effect waves-light btn-large modal-trigger col s12"
             data-target="modal1"
           >
             Ask a Question
