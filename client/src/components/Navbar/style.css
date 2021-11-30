@@ -7,10 +7,33 @@
 #joeys {
   font-size: 400%;
   font-family: "Permanent Marker", cursive;
-  padding: 2vh 0vh;
+  padding: 2vh 2vh;
 }
 
 .header-font {
   font-size: 180%;
+  font-family: "Permanent Marker", cursive;
   padding: 2vh 2vh;
+}
+
+@media screen and (max-width: 1000px) {
+  #joeys {
+    font-size: 250%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #joeys {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navbar-fixed,
+  .bar {
+    height: 24vh;
+  }
+  .header-font {
+    padding: 0vh 2vh;
+  }
 }

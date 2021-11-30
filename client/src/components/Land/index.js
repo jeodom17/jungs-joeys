@@ -11,6 +11,7 @@ export default function Land() {
       </div>
       <Link
         to="/account"
+        onClick="window.scrollTo(0, 0);"
         className="center waves-effect waves-light btn-large findbtn"
       >
         LOGIN / SIGNUP
