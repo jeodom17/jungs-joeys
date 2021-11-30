@@ -14,21 +14,17 @@ export default function Navbar() {
             </Link>
             <ul id="nav-mobile" className="left">
               <li>
-                <Link
-                  to="/forum"
-                  className="header-font dropdown-trigger"
-                  data-target="dropdown1"
-                >
+                <Link to="/forum" className="header-font">
                   Study Forum
                 </Link>
               </li>
-            </ul>
-            <ul id="nav-mobile" className="right">
               <li>
                 <Link to="/chat" class="header-font">
                   Chat
                 </Link>
               </li>
+            </ul>
+            <ul id="nav-mobile" className="right">
               <li>
                 <Link to="/profile" class="header-font">
                   Profile
