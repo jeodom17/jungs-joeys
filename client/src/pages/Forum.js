@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Category from "../components/Category";
 import "./styles/forum.css"
 
@@ -32,22 +32,30 @@ const CATEGORY_TOPICS = [
   "Unit 24 - Project 3 Continued",
 ];
 
-export default function Forum() {
-  const { loading, data } = useQuery(GET_TOPICS);
-  console.log(data)
-  const topicData = data?.getTopics || [];
-  console.log(topicData)
+const Forum = () => {
 
-  return (
-    <div className="topics">
-      <ul className="collection with-header">
-        <li className="collection-header"><h3>Select a Topic Below</h3></li>
-          <Category name="Career" />
-          <br />
-        <div className="codetopic">
-          {CATEGORY_TOPICS.map(topic => <Category name={topic} />)}
-        </div>
-      </ul>
-    </div>
-  );
-}
+
+    const  {loading, error, data} =  useQuery(GET_TOPICS);
+  const topicData = data?.getTopics || [];
+
+
+    return (
+      <div className="topics">
+        <ul className="collection with-header">
+          <li className="collection-header"><h3>Select a Topic Below</h3></li>
+            <Category name="Career" />
+            <br />
+         {loading ? 
+         <div className="topic-loading" >Loading...</div> 
+         :
+          <div className="codetopic">
+          {topicData.map(topic => <Category name={topic.name} />)}
+        </div>}
+        </ul>
+      </div>
+    );
+  }
+
+  export default Forum;
+
+

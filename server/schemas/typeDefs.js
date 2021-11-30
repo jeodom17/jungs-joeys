@@ -9,15 +9,16 @@ const typeDefs = gql`
   }
   
   type Topic {
+    _id: ID!
     name: String!
-    posts: [Post]
   }
 
   type Post {
     postId: ID!
     author: User
     topic: Topic!
-    content: String
+    question: String!
+    content: String!
     comments: [Comment]
   }
 
@@ -43,6 +44,7 @@ const typeDefs = gql`
   input PostInput {
     postId: ID!
     topic: String!
+    question: String!
     content: String!
     comments: [String]
   }
@@ -50,7 +52,7 @@ const typeDefs = gql`
   type Query {
     me: User
     getTopicByName(name: String!): Topic
-    getTopics: [Topic]
+    getTopics: [Topic]!
   }
 
   type Mutation {
