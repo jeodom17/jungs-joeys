@@ -2,6 +2,12 @@
   text-align: left;
   border: 5px solid #271c19;
   border-radius: 25px;
+  min-width: 350px;
+}
+
+.myquestions {
+  text-align: left;
+  min-width: 350px;
 }
 
 h3 {

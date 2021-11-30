@@ -1,7 +1,7 @@
 .navbar-fixed,
 .bar {
   background-color: #271c19;
-  height: 12vh;
+  height: 100px;
 }
 
 #joeys {
@@ -31,7 +31,7 @@
 @media screen and (max-width: 550px) {
   .navbar-fixed,
   .bar {
-    height: 24vh;
+    height: 150px;
   }
   .header-font {
     padding: 0vh 2vh;
