@@ -30,7 +30,7 @@ const Login = () => {
 
       Auth.login(data.login.token);
     } catch (e) {
-      console.error(e);
+      console.error("error: ", e, " mutation error: ", error);
     }
 
     // clear form values

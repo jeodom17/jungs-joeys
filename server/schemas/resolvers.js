@@ -15,14 +15,18 @@ const resolvers = {
         },
 
         getTopicByName: async (parent, args) => {
-            const postData = await Topic.findOne({ name: args.name}).populate({
+            const postData = await Topic.findOne({ name: args.name }).populate({
                 path: 'posts',
                 populate: [
                     {
                     path: 'author',
                     model: 'User'
+<<<<<<< Updated upstream
                     },
                     {
+=======
+                }, {
+>>>>>>> Stashed changes
                     path: 'comments',
                     model: 'Comment',
                     populate: {
@@ -30,6 +34,10 @@ const resolvers = {
                         model: 'User'
                         }
                     }
+<<<<<<< Updated upstream
+=======
+                }
+>>>>>>> Stashed changes
                 ]
             });
             return postData;
@@ -50,13 +58,13 @@ const resolvers = {
             const user = await User.findOne({ email });
 
             if (!user) {
-                throw new AuthenticationError('Incorrect credentials');
+                throw new AuthenticationError('No user exists');
             }
 
             const correctPw = await user.isCorrectPassword(password);
 
             if (!correctPw) {
-                throw new AuthenticationError('Incorrect credentials');
+                throw new AuthenticationError('Incorrect password');
             }
 
             const token = signToken(user);
@@ -101,7 +109,7 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
-        
+
     },
 };
 
