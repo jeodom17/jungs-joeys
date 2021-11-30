@@ -1,101 +1,110 @@
-
-//^ Imports below
-
-import React, { Component } from "react";
-import "./style.css"
+import React, { useState, useEffect } from "react";
+import { ADD_USER } from "../../utils/mutations";
+import { useMutation } from '@apollo/client';
+import Auth from '../../utils/auth';
 
 //* Sign up Form
-class SignUpForm extends Component {
-  constructor() {
-    super();
+const SignupForm = () => {
+  // set initial form state
+  const [userFormData, setUserFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
 
-    this.state = {
-      email: "",
-      password: "",
-      name: "",
-      hasAgreed: false
-    };
+  const [addUser, { error }] = useMutation(ADD_USER);
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
 
-  handleChange(event) {
-    let target = event.target;
-    let value = target.type === "checkbox" ? target.checked : target.value;
-    let name = target.name;
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-    this.setState({
-      [name]: value
+    const form = event.currentTarget;
+    event.preventDefault();
+    event.stopPropagation();
+
+
+    try {
+      const { data } = await addUser({
+        variables: { ...userFormData },
+      });
+      Auth.login(data.addUser.token);
+    } catch (err) {
+      console.error(err);
+    }
+
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
     });
-  }
+  };
 
-  handleSubmit(e) {
-    e.preventDefault();
+  return (
+    <div>
+      <form className="formFields" onSubmit={handleFormSubmit}>
 
-    console.log("The form was submitted with the following data:");
-    console.log(this.state);
-  }
-
-  render() {
-    return (
-      <div className="sign">
-        <div className="formCenter">
-          <form onSubmit={this.handleSubmit} className="formFields">
-            <div className="formField">
-              <label className="formFieldLabel" htmlFor="name">
-                UserName
-              </label>
-              <input
-                type="name"
-                id="name"
-                className="formFieldInput"
-                placeholder="Enter your USERNAME"
-                name="name"
-                value={this.state.name}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="formField">
-              <label className="formFieldLabel" htmlFor="email">
-                EMail Address
-              </label>
-              <input
-                type="name"
-                id="email"
-                className="formFieldInput"
-                placeholder="Enter your EMAIL"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-            </div>
-
-            <div className="formField">
-              <label className="formFieldLabel" htmlFor="password">
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                className="formFieldInput"
-                placeholder="Enter your PASSWORD"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-            </div>
-
-
-            <div className="formField">
-              <button className="formFieldButton">Sign Up</button>
-
-            </div>
-          </form>
+        <div className="formField">
+          <label className="formFieldLabel" htmlFor="name">
+            Username
+          </label>
+          <input
+            type="name"
+            id="name"
+            className="formFieldInput"
+            placeholder="Enter username"
+            name="name"
+            onChange={handleInputChange}
+            value={userFormData.username}
+          />
         </div>
-      </div>
-    );
-  }
-}
-export default SignUpForm;
+
+        <div className="formField">
+          <label className="formFieldLabel" htmlFor="email">
+            Email
+          </label>
+          <input
+            type="name"
+            id="email"
+            className="formFieldInput"
+            placeholder="Enter email"
+            name="email"
+            onChange={handleInputChange}
+            value={userFormData.email}
+          />
+        </div>
+
+        <div className="formField">
+          <label className="formFieldLabel" htmlFor="password">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="formFieldInput"
+            placeholder="Enter password"
+            name="password"
+            onChange={handleInputChange}
+            value={userFormData.password}
+          />
+        </div>
+
+        <div className="formField">
+          <button
+            // disabled={!(userFormData.email && userFormData.password && userFormData.username)}
+            type="submit"
+            variant="success"
+            className="formFieldButton"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default SignupForm;
