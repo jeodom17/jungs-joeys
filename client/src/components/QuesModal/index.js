@@ -1,6 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
+import { useMutation } from '@apollo/client';
+import { ADD_POST } from '../../utils/mutations';
+//* import Auth from '../utils/auth'; 
 
 class QuesModal extends Component {
   componentDidMount() {
@@ -31,6 +34,9 @@ class QuesModal extends Component {
     // instance.close();
     // instance.destroy();
   }
+   PostForm = () => {
+    
+  };
 
   render() {
     return (

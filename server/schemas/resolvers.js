@@ -17,13 +17,18 @@ const resolvers = {
         getTopicByName: async (parent, args) => {
             const postData = await Topic.findOne({ name: args.name}).populate({
                 path: 'posts',
-                populate: {
-                    path: 'author comments',
+                populate: [{
+                    path: 'author',
+                    model: 'User'
+                },{
+                    path: 'comments',
+                    model: 'Comment',
                     populate: {
-                        path: 'comments',
-                        populate: 'author'
+                        path: 'author',
+                        model: 'User'
                     }
                 }
+            ]
             });
             return postData;
         },
