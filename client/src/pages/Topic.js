@@ -9,7 +9,8 @@ import { GET_TOPIC_BY_NAME } from "../utils/queries";
 
 const Topic = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  
+  const forumName = searchParams.get("name");
+
   const { loading, error, data } = useQuery(GET_TOPIC_BY_NAME, {
     variables: { name: searchParams.get("name")}
   });
@@ -22,19 +23,19 @@ const Topic = () => {
   const postData = data?.getTopicByName || [];
   // console.log(postData.posts[0].content)
   const postArray = postData.posts
-  const postContent = postData.posts[0].content;
-  const postAuthor = postData.posts[0].author;
-
- 
   
   for (let i=0; i<postArray.length; i++) {
+    
+    const postContent = postData.posts[i].content;
+    const postAuthor = postData.posts[i].author;
+
     return (
       <>
         <div className="container">
           <div class="row">
             <div className="col s8">
               <h4>
-                Welcome to the (INSERT TOPIC) Forum 
+                Welcome to the {forumName} Forum 
               </h4>
             </div>
             <div className="col s4">
