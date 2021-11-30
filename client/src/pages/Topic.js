@@ -25,19 +25,21 @@ const Topic = () => {
   const postContent = postData.posts[0].content;
   const postAuthor = postData.posts[0].author;
 
-  //! useEffect(() => {
-    //! console.log("HERE");
-
-    //* use searchParams.get("name") in a graphQL call to the Topic db to populate page with the correct questions
-    //* need to use useQuery with the correct queries and typedefs to get the topics to populate here
-    // console.log(searchParams.get("name"))
-  //! })
+ 
   
   for (let i=0; i<postArray.length; i++) {
     return (
       <>
         <div className="container">
           <div class="row">
+            <div className="col s8">
+              <h4>
+                Welcome to the (INSERT TOPIC) Forum 
+              </h4>
+            </div>
+            <div className="col s4">
+            <QuesModal />
+            </div>
             <div class="col s12 m12">
               <div class="blue-grey darken-1">
                 <div class="card-content white-text">
