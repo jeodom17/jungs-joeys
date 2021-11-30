@@ -58,6 +58,7 @@ const SignupForm = () => {
             placeholder="Enter username"
             name="name"
             onChange={handleInputChange}
+            defaultValue=""
             value={userFormData.username}
           />
         </div>
