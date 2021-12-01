@@ -30,6 +30,7 @@ export const GET_TOPICS = gql`
 export const GET_TOPIC_BY_NAME = gql`
 query getTopicByName($name: String!) {
     getTopicByName(name: $name) {
+        _id
         name
         posts {
             question

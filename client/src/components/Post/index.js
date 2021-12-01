@@ -4,16 +4,16 @@ import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 
 
-export default function addAPost() {
-  const [postFormData, setPostFormData] = useState({ question: '', content: '' });
+export default function AddAPost(id) {
+  const [postFormData, setPostFormData] = useState({ question: '', content: '', author: '', topic: '' });
 
   const [createPost, { error }] = useMutation(CREATE_POST);
   const [addPost, { error2 }] = useMutation(ADD_POST);
 
-
+  setPostFormData({ topic: id });
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setPostFormData({ ...userFormData, [name]: value });
+    setPostFormData({ ...postFormData, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
@@ -49,13 +49,27 @@ export default function addAPost() {
     setPostFormData({
       question: '',
       content: '',
+      author: '',
     });
   };
 
   return (
-    <div>
+    <div className="postForm">
       <form onSubmit={handleFormSubmit}>
-        <div>
+        <div classname='inputBox'>
+          <label htmlFor="author">
+            Your username
+          </label>
+          <input
+            type="text"
+            id="author"
+            placeholder="Your username"
+            name="username"
+            value={postFormData.author}
+
+          />
+        </div>
+        <div classname='inputBox'>
           <label htmlFor="postTitle">
             Post Title
           </label>
@@ -65,11 +79,10 @@ export default function addAPost() {
             placeholder="Your Post Title"
             name="question"
             onChange={handleInputChange}
-
           />
         </div>
 
-        <div>
+        <div classname='inputBox'>
           <label htmlFor="postContent">
             Post Content
           </label>
@@ -82,11 +95,12 @@ export default function addAPost() {
           />
         </div>
 
-        <div>
+        <div classname='inputBox'>
           <button
             disabled={!(postFormData.question && postFormData.content)}
             type="submit"
             variant="success"
+            onClick={handleFormSubmit}
           >
             Add Post
           </button>
