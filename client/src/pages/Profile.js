@@ -4,6 +4,9 @@ import Question from "../components/Question";
 // import TopRated from "../components/TopRated";
 import "./styles/profile.css";
 
+
+
+
 export default function Profile() {
   return (
     <div className="user-profile">
