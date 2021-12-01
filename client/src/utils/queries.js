@@ -32,6 +32,7 @@ query getTopicByName($name: String!) {
     getTopicByName(name: $name) {
         name
         posts {
+            question
             postId
             content
             author {

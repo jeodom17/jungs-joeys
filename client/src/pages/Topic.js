@@ -17,64 +17,17 @@ const Topic = () => {
     variables: { name: searchParams.get("name") },
   });
 
-  const [addComment, {addError}] = useMutation(ADD_COMMENT);
-  const [createComment, {createError}] = useMutation(CREATE_COMMENT);
-
-  // const createNewComment = async () => {
-  //   await createComment(
-  //     {
-  //       variables:
-  //       {
-  //         author: 'test', // should be the current user
-  //       }
-  //     }
-  //   )
-  // }
-
-  // const addCommentToPost = async () => {
-  //   await addComment(
-  //     {variables:{postId: 1}})
-  // }
-
-
-
-  // if data isn't here yet, say so
-  if (loading) {
-    return <h2>LOADING.......</h2>;
-  }
 
   const postData = data?.getTopicByName || [];
 
 
   // console.log(postData.posts[0].content)
   const postArray = postData.posts;
+  console.log("HERE!", postData);
 
-  for (let i = 0; i < postArray.length; i++) {
-    const postContent = postData.posts[i].content;
-    const postAuthor = postData.posts[i].author.username;
-
-    // const postId = postData.posts[i].postId
-    const postId = "61a68cfe4109b95a70c88c25"
-
-    const handleComment = async () => {
-      try{
-        const newComment = await createComment({
-          variables: {content: 'test'}
-        });
-
-        console.log(newComment)
-        // const {data} = await addComment({
-        //   variables: {postId: postId}
-        // });
-  
-      } catch (err) {
-        console.error(err)
-      }
-    }
-
-    return (
-      <>
-        <div className="study-topics">
+  return (
+    <>
+    <div className="study-topics">
           <div className="container forum-topic">
             <div className="row forum-content">
               <div className="col s8">
@@ -85,12 +38,15 @@ const Topic = () => {
               <div className="col s4">
                 <QuesModal />
               </div>
+    {loading ? (<h2>LOADING.......</h2>)
+    : postArray.map(post => {
+      return (
               <div className="col s12 m12">
                 <div className="darken-1 topic-card">
                   <div className="card-content topic-text">
-                    <h5 className="post-author">By: {postAuthor}</h5>
-                    {/* <span class="card-title">Post Title</span> */}
-                    <p>{postContent}</p>
+                    <h5 className="post-author">By: {post.author.username}</h5>
+                    <span class="card-title">{post.question}</span>
+                    <p>{post.content}</p>
                   </div>
                   {/* display flex on following div so that the button goes beside the input */}
                   <div className="comment-form">
@@ -116,16 +72,16 @@ const Topic = () => {
                       Comments{" "}
                       <span className="comments material-icons">forum</span>
                     </h6>
-                    <SeeCommModal />
+                    <SeeCommModal commData={post.comments} />
                   </div>
                 </div>
-              </div>
-            </div>
+              </div>)}
+    )}
+                </div>
           </div>
         </div>
-      </>
+        </>
     );
-  }
 };
 
 export default Topic;
