@@ -17,16 +17,11 @@ const SignupForm = () => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
-    console.log(userFormData.username)
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    const form = event.currentTarget;
-    event.preventDefault();
-    event.stopPropagation();
-
+    console.log("MeoW",userFormData)
 
     try {
       const { data } = await addUser({
@@ -51,7 +46,7 @@ const SignupForm = () => {
           <label className="formFieldLabel">Username</label>
           <input
             type="name"
-            name="name"
+            name="username"
             className="formFieldInput"
             placeholder='Enter username'
             onChange={handleInputChange}
