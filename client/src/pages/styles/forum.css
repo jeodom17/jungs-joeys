@@ -1,3 +1,12 @@
+.study-forum {
+  background-image: url("../../assets/desert-forum.png");
+  background-position: center;
+  background-size: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
 .topics {
   text-align: center;
   padding: 2rem 0rem;
@@ -20,4 +29,10 @@
   flex-wrap: wrap;
   align-items: stretch;
   background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 800px) {
+  .codetopic {
+    height: 1025px;
+  }
 }

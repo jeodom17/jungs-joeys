@@ -6,8 +6,8 @@ export default function Question() {
   return (
     <div>
       <ul className="collection myposts">
-        <li className="collection-item avatar">
-          <h3 className="posts-header">POSTS</h3>
+        <li className="collection-item">
+          <h3 className="posts-header">MY POSTS</h3>
           <Link to="/" className="secondary-content">
             <i className="material-icons"></i>
           </Link>
@@ -16,8 +16,8 @@ export default function Question() {
       <ul className="collection myquestions">
         <li className="collection-item avatar">
           <i className="material-icons circle">folder</i>
-          <p className="topics">TOPIC:</p>
-          <p className="questions">Question:</p>
+          <p className="topics">TOPIC 1:</p>
+          <p className="questions">Question 1:</p>
           <Link to="/forum" className="secondary-content">
             See Comments
           </Link>
