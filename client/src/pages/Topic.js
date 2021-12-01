@@ -23,7 +23,7 @@ const Topic = () => {
 
   // console.log(postData.posts[0].content)
   const postArray = postData.posts;
-  console.log("HERE!", postData);
+  console.log("HERE!", postData._id);
 
   return (
     <>
