@@ -58,3 +58,18 @@
   min-width: 100px;
   background-color: #ef9511;
 }
+
+.postForm {
+  background-color: #fff3ec;
+  border: 1px solid #55423d;
+}
+
+.postForm label {
+  font-weight: bold;
+  color: #271c19;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
