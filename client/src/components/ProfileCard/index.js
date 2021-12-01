@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Sidenav } from "materialize-css";
+// import { Sidenav } from "materialize-css";
 import profileImage from "../../assets/image.png";
 import "./style.css";
 
@@ -9,42 +9,20 @@ import { useQuery } from "@apollo/client";
 import { GET_ME } from "../../utils/queries"
 
 
-
-//   //* const userArray = userData.users
-  
-//   //* for (let i=0; i<userArray.length; i++) {
     
 
 
 export default function SideNav() {
 
-  const [searchParams, setSearchParams] = useSearchParams();
-    const profile = searchParams.get("username");
   
-    const { loading, error, data } = useQuery(GET_ME, {
-      variables: { username: searchParams.get("username")}
-    });
-
-    if (loading) {
-         return <h2>LOADING.......</h2>;
-      }
-      const userData = data?.me || [];
-
-console.log(userData);
-
-
-    const username = userData.me.username;
-    const userEmail = userData.me.email;
-    
-    console.log(userEmail)
 
   return (
     <>
       <div className="card">
         <div className="card-image">
           <img src={profileImage} alt="profile pic" className="photo"></img>
-          <div class="username"> User:{username} </div>
-          <div class="title"> {profile} </div>
+          <div class="username"> User:{} </div>
+          <div class="title"> {} </div>
         </div>
         <div class="card-content">
           <p>EMAIL:  </p>
@@ -57,5 +35,3 @@ console.log(userData);
     </>
   );
 }
-//*}
-//^-------

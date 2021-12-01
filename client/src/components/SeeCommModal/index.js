@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import "./style.css";
-
+import { Collapsible, CollapsibleItem } from 'react-materialize';
 import { useQuery } from "@apollo/client";
 import { GET_TOPIC_BY_NAME } from "../../utils/queries";
 import { useSearchParams } from "react-router-dom";
@@ -23,7 +23,16 @@ const SeeCommModal = () => {
 
     for (let i = 0; i < commentArray.length; i++) {
       return (
+        <>
         <div>
+        <Collapsible accordion>
+     
+      <CollapsibleItem
+        expanded={false}
+        header="SEE COMMENTS."
+        node="div"
+      >
+
           <div className="row">
             <div className="col s12 m12">
               <div className="blue-grey darken-1">
@@ -34,7 +43,11 @@ const SeeCommModal = () => {
               </div>
             </div>
           </div>
+
+         </CollapsibleItem>
+          </Collapsible>
         </div>
+        </>
       );
     }
   }
