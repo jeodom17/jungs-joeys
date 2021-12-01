@@ -33,6 +33,7 @@ query getTopicByName($name: String!) {
         name
         posts {
             question
+            postId
             content
             author {
                 username

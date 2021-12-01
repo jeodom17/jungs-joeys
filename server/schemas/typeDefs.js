@@ -5,8 +5,7 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    posts:[Post]
-    comments: [Comment]
+    posts: [Post]
   }
   
   type Topic {
@@ -16,7 +15,7 @@ const typeDefs = gql`
   }
 
   type Post {
-    postId: ID!
+    postId: ID
     author: User
     topic: Topic!
     question: String!
@@ -43,6 +42,21 @@ const typeDefs = gql`
     upvotes: Int
   }
 
+  input AuthorCommentInput {
+    userId: ID!
+    username: String!
+  }
+
+  input AuthorPostInput {
+    userId: ID!
+    username: String!
+  }
+
+  input TopicPostInput {
+    topicId: ID!
+    name: String!
+  }
+
   input PostInput {
     postId: ID!
     topic: String!
@@ -61,9 +75,11 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addPost(postData: PostInput!): Topic
-    addComment(commentData: CommentInput!): Post
     removeComment(commentId: ID!): Post
+    addComment(postId: ID!): Post
+    createComment(content: String!, author: AuthorCommentInput!): Comment
+    createPost(content: String!, author: AuthorPostInput!, topic: TopicPostInput!): Post
   }
-`;
-
+  `;
+  // addComment(commentData: CommentInput!): Post
 module.exports = typeDefs;
