@@ -91,6 +91,14 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        createComment: async(parent, {commentData}, context) => {
+            const newComment = await Comment.create({
+                content: commentData.content,
+                author: commentData.author
+            });
+
+            return newComment;
+        },
         addComment: async (parent, { commentData }, context) => {
             if (context.post) {
                 const updatedPost = await Post.findByIdAndUpdate(
@@ -117,6 +125,14 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        createPost: async (parent, {postData}, context) => {
+            const newPost = await Post.create({
+                content: postData.content,
+                author: postData.author,
+                topic: postData.topic
+            })
+            return newPost;
+        }
 
     },
 };
