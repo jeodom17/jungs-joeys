@@ -58,8 +58,6 @@ const typeDefs = gql`
   }
 
   input PostInput {
-    postId: ID!
-    topic: String!
     question: String!
     content: String!
     comments: [String]
