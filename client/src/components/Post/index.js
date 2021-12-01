@@ -4,13 +4,13 @@ import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
 
 
-export default function AddAPost(id) {
-  const [postFormData, setPostFormData] = useState({ question: '', content: '', author: '', topic: '' });
+export default function AddAPost(props) {
+  const [postFormData, setPostFormData] = useState({ question: '', content: '', author: Auth.getProfile().data.username || "", topic: props.topicId });
 
   const [createPost, { error }] = useMutation(CREATE_POST);
   const [addPost, { error2 }] = useMutation(ADD_POST);
 
-  setPostFormData({ topic: id });
+ 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setPostFormData({ ...postFormData, [name]: value });
@@ -23,6 +23,7 @@ export default function AddAPost(id) {
     event.preventDefault();
 
     try {
+      console.log("HEE0", postFormData)
       const { data } = await createPost({
         variables: { ...postFormData },
       });
@@ -50,6 +51,7 @@ export default function AddAPost(id) {
       question: '',
       content: '',
       author: '',
+      topic:''
     });
   };
 
@@ -65,7 +67,7 @@ export default function AddAPost(id) {
             id="author"
             placeholder="Your username"
             name="username"
-            value={postFormData.author}
+            value={Auth.getProfile().data.username || ""}
 
           />
         </div>
@@ -97,7 +99,6 @@ export default function AddAPost(id) {
 
         <div classname='inputBox'>
           <button
-            disabled={!(postFormData.question && postFormData.content)}
             type="submit"
             variant="success"
             onClick={handleFormSubmit}
