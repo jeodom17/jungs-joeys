@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 //* import { Link } from "react-router-dom";
 import SeeCommModal from "../components/SeeCommModal";
 import CommModal from "../components/CommModal";
 import addAPost from "../components/Post";
 import { useSearchParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
+import { useQuery, useMutation } from "@apollo/client";
 import { GET_TOPIC_BY_NAME } from "../utils/queries";
 import "./styles/topic.css";
+import { ADD_COMMENT, CREATE_COMMENT } from "../utils/mutations";
 
 const Topic = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,19 +17,60 @@ const Topic = () => {
     variables: { name: searchParams.get("name") },
   });
 
+  const [addComment, {addError}] = useMutation(ADD_COMMENT);
+  const [createComment, {createError}] = useMutation(CREATE_COMMENT);
+
+  // const createNewComment = async () => {
+  //   await createComment(
+  //     {
+  //       variables:
+  //       {
+  //         author: 'test', // should be the current user
+  //       }
+  //     }
+  //   )
+  // }
+
+  // const addCommentToPost = async () => {
+  //   await addComment(
+  //     {variables:{postId: 1}})
+  // }
+
+
+
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING.......</h2>;
   }
 
   const postData = data?.getTopicByName || [];
+
+
   // console.log(postData.posts[0].content)
   const postArray = postData.posts;
 
   for (let i = 0; i < postArray.length; i++) {
     const postContent = postData.posts[i].content;
     const postAuthor = postData.posts[i].author.username;
-    console.log(postAuthor);
+
+    // const postId = postData.posts[i].postId
+    const postId = "61a68cfe4109b95a70c88c25"
+
+    const handleComment = async () => {
+      try{
+        const newComment = await createComment({
+          variables: {content: 'test'}
+        });
+
+        console.log(newComment)
+        // const {data} = await addComment({
+        //   variables: {postId: postId}
+        // });
+  
+      } catch (err) {
+        console.error(err)
+      }
+    }
 
     return (
       <>
