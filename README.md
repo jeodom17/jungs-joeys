@@ -40,8 +40,8 @@ npm run develop
 
 ## Application
 
-[Deployed Application]()
-[Screenshot]()
+[Deployed Application](https://jungs-joeys.herokuapp.com/)
+![Screenshot](https://github.com/jeodom17/jungs-joeys/blob/main/img/Screenshot%202021-11-30%20203622.png)
 
 ## Contribution
 
